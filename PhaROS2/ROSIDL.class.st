@@ -17,7 +17,14 @@ ROSIDL class >> getMessageTypeSupport [
 { #category : #native }
 ROSIDL class >> getMessageTypeSupportHandle: aIdentifier [
 	|ret|
-	ret := self ffiCall: #(  )
+	ret := ROSIDL_message_type_support_t externalNew.
+	self ffiCall: #(ROSIDL_message_type_support_t * get_message_typesupport_handle(ret, String aIdentifier)).
+	^ret
+]
+
+{ #category : #native }
+ROSIDL class >> getMessageTypeSupportHandle: aString msgTypeAddr: aROSIDL_message_type_support_t [ 
+	self shouldBeImplemented.
 ]
 
 { #category : #native }

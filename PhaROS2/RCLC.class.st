@@ -17,6 +17,11 @@ RCLC class >> ffiLibraryName [
 ]
 
 { #category : #native }
+RCLC class >> getMessageTypeSupport [ 
+	^self ffiCall: #(ROS2_Message_type getTypeSupport())
+]
+
+{ #category : #native }
 RCLC class >> initNoArgs [
 	|state externalArray argv|
 	state := self status.
