@@ -6,13 +6,15 @@ Class {
 
 { #category : #native }
 RCLC class >> createNode: nodeName namespace: aNamespace [
+	" Fonction tester et OK "
 	^self ffiCall: #(ROS2_Node rclc_create_node(String nodeName, String aNamespace))
 ]
 
 { #category : #native }
 RCLC class >> ffiLibraryName [ 
 	"Kept for backward compatibility. 
-	 Users should use unix32* or unix64*"
+	 Users should use unix32* or unix64*
+	 /!\Chemin en dure"
 	^ '/home/william/ros2_ws/install/lib/librclc.so'
 ]
 
@@ -43,11 +45,13 @@ ifFalse:
 
 { #category : #native }
 RCLC class >> rcl_init: aArgc argv: aArgv [
+	"Fonction tester et OK"
 	^self ffiCall: #(int rclc_init #(int aArgc, FFIExternalArray * aArgv)).
 ]
 
 { #category : #native }
 RCLC class >> status [
+	"Fonction tester et OK"
 	^self ffiCall: #(bool rclc_ok()).
 ]
 
