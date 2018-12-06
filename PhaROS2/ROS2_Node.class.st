@@ -10,6 +10,25 @@ ROS2_Node >> createPublisher: aName queueSize: anInt messageType: aMessageType [
 ]
 
 { #category : #'pubs_subs' }
+ROS2_Node >> createSubscriber: aName queueSize: anInt messageType: aMessageType aCallbackBlock: aBlock [
+	|callback|
+	callback := ROS2_Callback on: aBlock.
+	self createSubscriber: aName queueSize: anInt messageType: aMessageType callback: callback.
+	^callback
+]
+
+{ #category : #'pubs_subs' }
+ROS2_Node >> createSubscriber: aName queueSize: anInt messageType: aMessageType callback: aROS2_subscriber_callback [
+	^self ffiCall: #(ROS2_Subscriber * rclc_create_subscription (
+	self,
+	ROS2_message_type type_support,
+   String aName,
+   ROS2_subscriber_callback aROS2_subscriber_callback,
+   anInt,
+   0))
+]
+
+{ #category : #'pubs_subs' }
 ROS2_Node >> destroyMe [
 	^self ffiCall: #(int rclc_destroy_node(self))
 ]
