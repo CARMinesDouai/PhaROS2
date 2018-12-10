@@ -6,6 +6,7 @@ Class {
 
 { #category : #publish }
 ROS2_Publisher >> destroy [
+	"Fonction testé et OK"
 	^self ffiCall: #(int rclc_destroy_publisher(self))
 ]
 

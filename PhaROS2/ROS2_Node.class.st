@@ -6,7 +6,7 @@ Class {
 
 { #category : #'pubs_subs' }
 ROS2_Node >> createPublisher: aName queueSize: anInt messageType: aMessageType [
-	^self ffiCall: #(ROS2_Publisher rclc_create_publisher(self, ROS2_Message_type aMessageType , String aName, int anInt)).
+	^self ffiCall: #(ROS2_Publisher rclc_create_publisher(self, ROS2_TypeSupport_struct aMessageType , char * aName, int anInt)).
 ]
 
 { #category : #'pubs_subs' }
