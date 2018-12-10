@@ -20,7 +20,7 @@ RCLC class >> ffiLibraryName [
 
 { #category : #native }
 RCLC class >> getMessageTypeSupport [ 
-	^self ffiCall: #(ROS2_Message_type getTypeSupport())
+	^self ffiCall: #(ROS2_TypeSupport_struct getTypeSupport())
 ]
 
 { #category : #native }
