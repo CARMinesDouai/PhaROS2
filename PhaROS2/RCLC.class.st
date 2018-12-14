@@ -19,6 +19,16 @@ RCLC class >> ffiLibraryName [
 ]
 
 { #category : #native }
+RCLC class >> getMessageIntraProcessTypeSupport [ 
+	^self ffiCall: #(ROS2_TypeSupport_struct getIntraProcessTypeSupport())
+]
+
+{ #category : #native }
+RCLC class >> getMessageStringTypeSupport [ 
+	^self ffiCall: #(ROS2_TypeSupport_struct getStringTypeSupport())
+]
+
+{ #category : #native }
 RCLC class >> getMessageTypeSupport [ 
 	^self ffiCall: #(ROS2_TypeSupport_struct getTypeSupport())
 ]
