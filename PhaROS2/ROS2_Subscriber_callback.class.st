@@ -6,5 +6,5 @@ Class {
 
 { #category : #native }
 ROS2_Subscriber_callback class >> mySignature [
-	^#(void *)
+	^#(void (void * data))
 ]

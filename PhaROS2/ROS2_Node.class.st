@@ -18,14 +18,14 @@ ROS2_Node >> createSubscriber: aName queueSize: anInt messageType: aMessageType 
 ]
 
 { #category : #'pubs_subs' }
-ROS2_Node >> createSubscriber: aName queueSize: anInt messageType: aMessageType callback: aROS2_subscriber_callback [
-	^self ffiCall: #(ROS2_Subscriber * rclc_create_subscription (
-	self,
-	ROS2_message_type type_support,
-   String aName,
-   ROS2_subscriber_callback aROS2_subscriber_callback,
-   int anInt,
-   bool 0))
+ROS2_Node >> createSubscriber: aTopicName queueSize: anInt messageType: aMessageType callback: aROS2_subscriber_callback ignoreLocalPublication: aBoolean [
+	^self ffiCall: #(ROS2_Subscriber * rclc_create_subscription(
+  self,
+  ROS2_TypeSupport_struct aMessageType,
+  String aTopicName,
+  ROS2_Subscriber_callback aROS2_subscriber_callback,
+  int anInt,
+  bool aBoolean))
 ]
 
 { #category : #'pubs_subs' }
