@@ -36,5 +36,5 @@ ROS2_Node >> destroyMe [
 
 { #category : #'pubs_subs' }
 ROS2_Node >> spinMeTimeout: anInteger [
-	^self ffiCall: #(void rclc_spin_node_once(self, anInteger))
+	^self ffiCall: #(void rclc_spin_node_once(self, int anInteger))
 ]
