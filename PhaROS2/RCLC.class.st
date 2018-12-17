@@ -24,6 +24,11 @@ RCLC class >> getMessageIntraProcessTypeSupport [
 ]
 
 { #category : #native }
+RCLC class >> getMessageString: aString [
+	^self ffiCall: #(void * setDataToStringTypeSupport(String aString))
+]
+
+{ #category : #native }
 RCLC class >> getMessageStringTypeSupport [ 
 	^self ffiCall: #(ROS2_TypeSupport_struct getStringTypeSupport())
 ]
