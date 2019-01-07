@@ -30,25 +30,35 @@ PhaROS2TypeBrowser >> initialize [
 
 { #category : #ROS2 }
 PhaROS2TypeBrowser >> rosType: aType [
-	| typeExpand fieldDesc|
+	| typeName typeDomain typeExpand fieldDesc class|
+	typeDomain := (aType substrings: '/') at: 1.
+	typeName := (aType substrings: '/') at: 2.
+	
+	fieldDesc := '^#('.
 	
 	^browse at: aType ifAbsent: [ 
 			typeExpand := (PipeableOSProcess command: 'ros2 msg show',aType) output.
-			(self typeSearch: typeExpand) do: [ :type | 
-					
-				 ]
+			(self typeSearch: typeExpand) do: [ :name :type | 
+					  browse at: typeDomain,'/',type ifAbsent: [ self rosType: type ].
+					fieldDesc := fieldDesc,String lf,String tab,type,String space,name,';'. 
+				 ].
+			fieldDesc := fieldDesc,String lf,')'.
+			
+			class := PhaROS2_Type subclass: typeName asSymbol instanceVariableNames: '' classVariableNames: '' package: 'PhaROS2-Type'.
+			class class compile: 'fieldDesc ',fieldDesc.
+			class.
 		 ].
 ]
 
 { #category : #ROS2 }
 PhaROS2TypeBrowser >> typeSearch: aRos2Type [
 	| returned |
-	returned := OrderedCollection new.
+	returned := Dictionary new.
 	aRos2Type
 		linesDo: [ :line | 
 			line size isNotEmpty
 				ifTrue: [ (line at: 1 == $# not)
-						ifTrue: [ returned add: ((line substrings: ' ') at: 1) ]
+						ifTrue: [ returned at: ((line substrings: ' ') at: 2) put: ((line substrings: ' ') at: 1) ]
 						]
 					].
 	^aRos2Type
