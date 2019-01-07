@@ -37,10 +37,11 @@ PhaROS2TypeBrowser >> rosType: aType [
 	fieldDesc := '^#('.
 	
 	^browse at: aType ifAbsent: [ 
-			typeExpand := (PipeableOSProcess command: 'ros2 msg show',aType) output.
-			(self typeSearch: typeExpand) do: [ :name :type | 
-					  browse at: typeDomain,'/',type ifAbsent: [ self rosType: type ].
-					fieldDesc := fieldDesc,String lf,String tab,type,String space,name,';'. 
+			typeExpand := (PipeableOSProcess command: 'ros2 msg show ',aType) output.
+			(self typeSearch: typeExpand) associationsDo: [ :value | 
+					  " browse at: typeDomain,'/',type ifAbsent: [ self rosType: type ]."
+					  " fieldDesc := fieldDesc,String lf,String tab,type,String space,name,';'."
+						Transcript crShow: value.
 				 ].
 			fieldDesc := fieldDesc,String lf,')'.
 			
@@ -53,14 +54,15 @@ PhaROS2TypeBrowser >> rosType: aType [
 { #category : #ROS2 }
 PhaROS2TypeBrowser >> typeSearch: aRos2Type [
 	| returned |
+	Transcript crShow: aRos2Type.
 	returned := Dictionary new.
 	aRos2Type
 		linesDo: [ :line | 
-			line size isNotEmpty
-				ifTrue: [ (line at: 1 == $# not)
+			line isNotEmpty
+				ifTrue: [ (((line at: 1) == $#) not)
 						ifTrue: [ returned at: ((line substrings: ' ') at: 2) put: ((line substrings: ' ') at: 1) ]
 						]
 					].
-	^aRos2Type
+	^returned
 				
 ]
