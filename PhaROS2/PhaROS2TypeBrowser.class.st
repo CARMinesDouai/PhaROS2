@@ -20,6 +20,12 @@ PhaROS2TypeBrowser class >> new [
 	self error: 'This is Singleton, use instance instead of new'
 ]
 
+{ #category : #initialization }
+PhaROS2TypeBrowser class >> reset [ 
+	"PhaROS2_Type allSubclassesDo: [ :class | class remove ]."
+	instance := nil.
+]
+
 { #category : #Initialization }
 PhaROS2TypeBrowser >> initialize [ 
 	super initialize.
@@ -30,31 +36,40 @@ PhaROS2TypeBrowser >> initialize [
 
 { #category : #ROS2 }
 PhaROS2TypeBrowser >> rosType: aType [
-	| typeName typeDomain typeExpand fieldDesc class|
+	| typeName typeDomain typeExpand fieldDesc class value type className |
 	typeDomain := (aType substrings: '/') at: 1.
 	typeName := (aType substrings: '/') at: 2.
-	
+	className := aType capitalized.
+	className := className replaceAll: $/ with: $_.
 	fieldDesc := '^#('.
-	
-	^browse at: aType ifAbsent: [ 
-			typeExpand := (PipeableOSProcess command: 'ros2 msg show ',aType) output.
-			(self typeSearch: typeExpand) associationsDo: [ :value | 
-					  " browse at: typeDomain,'/',type ifAbsent: [ self rosType: type ]."
-					  " fieldDesc := fieldDesc,String lf,String tab,type,String space,name,';'."
-						Transcript crShow: value.
-				 ].
-			fieldDesc := fieldDesc,String lf,')'.
+	^ browse
+		at: className
+		ifAbsentPut: [ 
+			Transcript crShow: 'Type search: '; show: aType; cr.
+			typeExpand := (PipeableOSProcess command: 'ros2 msg show ' , aType) output.
+			type := self typeSearch: typeExpand.
+			type keysDo: [ :key | 
+					value := type at: key.
+					browse
+						at: typeDomain , '/' , value
+						ifAbsent: [ self rosType: typeDomain , '/' , value ].
+					fieldDesc := fieldDesc , String lf , String tab , typeDomain , '_' , value , String space , key , ';'
+				].
+			fieldDesc := fieldDesc , String lf , ')'.
 			
-			class := PhaROS2_Type subclass: typeName asSymbol instanceVariableNames: '' classVariableNames: '' package: 'PhaROS2-Type'.
-			class class compile: 'fieldDesc ',fieldDesc.
-			class.
-		 ].
+			class := PhaROS2_Type
+				subclass: className asSymbol
+				instanceVariableNames: ''
+				classVariableNames: ''
+				package: 'PhaROS2-Type'.
+				
+			class class compile: 'fieldDesc ' , fieldDesc.
+			class ]
 ]
 
 { #category : #ROS2 }
 PhaROS2TypeBrowser >> typeSearch: aRos2Type [
 	| returned |
-	Transcript crShow: aRos2Type.
 	returned := Dictionary new.
 	aRos2Type
 		linesDo: [ :line | 
