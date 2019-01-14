@@ -39,6 +39,24 @@ ROS2Type >> handle: anHandle [
 	data := FFIExternalStructure fromHandle: (struct rosidl_message_type_support).
 ]
 
+{ #category : #primitive }
+ROS2Type >> nextFloat32 [
+	| rawFloatValue |
+	rawFloatValue := Float fromIEEE32Bit: ('16r',data getHandle getHandle asByteArrayPointer reverse hex) asSymbol .
+	((rawFloatValue isNaN) or: [rawFloatValue isInfinite]) ifTrue: [ ^ rawFloatValue ].
+	^ rawFloatValue
+]
+
+{ #category : #primitive }
+ROS2Type >> nextInt32 [
+	^data getHandle asInteger.
+]
+
+{ #category : #primitive }
+ROS2Type >> nextString [ 
+	^data getHandle readString 
+]
+
 { #category : #accessing }
 ROS2Type >> struct [
 	^ struct

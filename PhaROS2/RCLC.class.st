@@ -19,6 +19,26 @@ RCLC class >> ffiLibraryName [
 ]
 
 { #category : #native }
+RCLC class >> getMessageByteMultiArrayTypeSupport [ 
+	^self ffiCall: #(ROS2_TypeSupport_struct getByteArrayTypeSupport())
+]
+
+{ #category : #native }
+RCLC class >> getMessageByteTypeSupport [ 
+	^self ffiCall: #(ROS2_TypeSupport_struct getByteTypeSupport())
+]
+
+{ #category : #native }
+RCLC class >> getMessageEmptyTypeSupport [ 
+	^self ffiCall: #(ROS2_TypeSupport_struct getEmptyTypeSupport())
+]
+
+{ #category : #native }
+RCLC class >> getMessageFloat32TypeSupport [ 
+	^self ffiCall: #(ROS2_TypeSupport_struct getFloat32TypeSupport())
+]
+
+{ #category : #native }
 RCLC class >> getMessageInt32TypeSupport [ 
 	^self ffiCall: #(ROS2_TypeSupport_struct getInt32TypeSupport())
 ]
