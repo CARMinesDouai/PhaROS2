@@ -20,18 +20,19 @@ ROS2Type class >> fromHandle: aHandle [
 { #category : #primitive }
 ROS2Type class >> primitiveTypes [
 	^#(
-		string,
-		float64,
-		float32,
-		byte,
-		int64,
-		int32,
-		int16,
-		int8,
-		uint8,
-		uint16,
-		uint32,
-		uint64
+		'string',
+		'float64',
+		'float32',
+		'float32[]',
+		'byte',
+		'int64',
+		'int32',
+		'int16',
+		'int8',
+		'uint8',
+		'uint16',
+		'uint32',
+		'uint64'
 	)
 ]
 

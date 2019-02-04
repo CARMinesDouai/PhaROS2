@@ -34,51 +34,24 @@ PhaROS2TypeBrowser >> initialize [
 	self populateDict.
 ]
 
+{ #category : #ROS2 }
+PhaROS2TypeBrowser >> need: aROS2Type [
+	|nClass|
+	^browse at: aROS2Type ifAbsent: [ 
+		nClass := self ros2Type: aROS2Type .
+		browse at: aROS2Type put: nClass.
+		^nClass
+		 ].
+]
+
 { #category : #Initialization }
 PhaROS2TypeBrowser >> populateDict [
 	ROS2Type subclassesDo: [ :sub | browse at: sub name put: sub].
 ]
 
 { #category : #ROS2 }
-PhaROS2TypeBrowser >> rosType: aType [
-	| typeName typeDomain typeExpand fieldDesc class value type className methodToAdd|
-	typeDomain := (aType substrings: '/') at: 1.
-	typeName := (aType substrings: '/') at: 2.
-	className := aType capitalized.
-	className := className replaceAll: $/ with: $_.
-	methodToAdd := OrderedCollection new.
-	fieldDesc := '^#('.
-	^ browse
-		at: className
-		ifAbsentPut: [ 
-			Transcript crShow: 'Type search: '; show: aType; cr.
-			typeExpand := (PipeableOSProcess command: 'ros2 msg show ' , aType) output.
-			typeExpand isEmpty ifTrue: [ self error: 'Type not found or empty' ].
-			type := self typeSearch: typeExpand.
-			type keysDo: [ :key | 
-					value := type at: key.
-					(ROS2Type primitiveTypes includes: value) ifTrue: [
-						Transcript crShow: 'Value: ',value,' is primitive'. 
-						fieldDesc := fieldDesc, String lf , String tab , value , String space , key , ';'
-						]
-					ifFalse: [
-						browse
-							at: typeDomain , '/' , value
-							ifAbsent: [ self rosType: typeDomain , '/' , value ].
-							fieldDesc := fieldDesc, String lf , String tab , typeDomain capitalized , '_' , value , String space , key , ';'
-							].
-				].
-			fieldDesc := fieldDesc , String lf , ')'.
-			
-			class := PhaROS2_Type
-				subclass: className asSymbol
-				instanceVariableNames: ''
-				classVariableNames: ''
-				package: 'PhaROS2-Type'.
-				
-			class class compile: 'fieldsDesc ',String lf , fieldDesc.
-			class rebuildFieldAccessors.
-			class ]
+PhaROS2TypeBrowser >> ros2Type: aType [
+	^browse at: aType ifAbsent: [PhaROS2TypeParser parseROS2Type: (aType asString).]
 ]
 
 { #category : #ROS2 }
