@@ -1,6 +1,9 @@
 Class {
 	#name : #'ROS2_Node',
 	#superclass : #ROS2Handle,
+	#instVars : [
+		'thread'
+	],
 	#category : #'PhaROS2-Objects'
 }
 

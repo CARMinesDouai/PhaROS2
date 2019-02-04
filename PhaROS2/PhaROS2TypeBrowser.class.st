@@ -31,16 +31,22 @@ PhaROS2TypeBrowser >> initialize [
 	super initialize.
 	
 	browse := Dictionary new.
-	
+	self populateDict.
+]
+
+{ #category : #Initialization }
+PhaROS2TypeBrowser >> populateDict [
+	ROS2Type subclassesDo: [ :sub | browse at: sub name put: sub].
 ]
 
 { #category : #ROS2 }
 PhaROS2TypeBrowser >> rosType: aType [
-	| typeName typeDomain typeExpand fieldDesc class value type className |
+	| typeName typeDomain typeExpand fieldDesc class value type className methodToAdd|
 	typeDomain := (aType substrings: '/') at: 1.
 	typeName := (aType substrings: '/') at: 2.
 	className := aType capitalized.
 	className := className replaceAll: $/ with: $_.
+	methodToAdd := OrderedCollection new.
 	fieldDesc := '^#('.
 	^ browse
 		at: className
@@ -50,20 +56,27 @@ PhaROS2TypeBrowser >> rosType: aType [
 			type := self typeSearch: typeExpand.
 			type keysDo: [ :key | 
 					value := type at: key.
-					browse
-						at: typeDomain , '/' , value
-						ifAbsent: [ self rosType: typeDomain , '/' , value ].
-					fieldDesc := fieldDesc , String lf , String tab , typeDomain , '_' , value , String space , key , ';'
+					(ROS2Type primitiveTypes includes: value) ifTrue: [
+						Transcript crShow: 'Value: ',value,' is primitive'. 
+						fieldDesc := fieldDesc , String lf , String tab , value , String space , key , ';'
+						]
+					ifFalse: [
+						browse
+							at: typeDomain , '/' , value
+							ifAbsent: [ self rosType: typeDomain , '/' , value ].
+							fieldDesc := fieldDesc , String lf , String tab , typeDomain , '_' , value , String space , key , ';'
+							].
 				].
 			fieldDesc := fieldDesc , String lf , ')'.
 			
-			class := PhaROS2_Type
+			class := ROS2Type
 				subclass: className asSymbol
 				instanceVariableNames: ''
 				classVariableNames: ''
 				package: 'PhaROS2-Type'.
 				
 			class class compile: 'fieldDesc ' , fieldDesc.
+			
 			class ]
 ]
 

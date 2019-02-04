@@ -17,6 +17,16 @@ ROS2Type class >> fromHandle: aHandle [
 		yourself
 ]
 
+{ #category : #primitive }
+ROS2Type class >> primitiveTypes [
+	^#(
+		string,
+		float64,
+		byte
+		
+	)
+]
+
 { #category : #accessing }
 ROS2Type >> data [
 	^ data
@@ -37,6 +47,11 @@ ROS2Type >> handle: anHandle [
 	handle := anHandle.
 	struct := ROS2_TypeSupport_struct fromHandle: handle.
 	data := FFIExternalStructure fromHandle: (struct rosidl_message_type_support).
+]
+
+{ #category : #primitive }
+ROS2Type >> nextByte [
+	^data getHandle asInteger.
 ]
 
 { #category : #primitive }
