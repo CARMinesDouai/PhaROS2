@@ -2,10 +2,17 @@ Class {
 	#name : #'ROS2_Node',
 	#superclass : #ROS2Handle,
 	#instVars : [
-		'thread'
+		'thread',
+		'spinThread'
 	],
 	#category : #'PhaROS2-Objects'
 }
+
+{ #category : #Factory }
+ROS2_Node class >> new: aTopicName namespace: aNamespace [
+	(RCLC status) ifFalse: [ RCLC initNoArgs. ].
+	^RCLC createNode: aTopicName namespace: aNamespace 
+]
 
 { #category : #'pubs_subs' }
 ROS2_Node >> createPublisher: aName queueSize: anInt messageType: aMessageType [
@@ -31,13 +38,48 @@ ROS2_Node >> createSubscriber: aTopicName queueSize: anInt messageType: aMessage
   bool aBoolean))
 ]
 
+{ #category : #spin }
+ROS2_Node >> delayBetweenSpin [
+	"The time between 2 spin"
+	^10
+]
+
 { #category : #'pubs_subs' }
 ROS2_Node >> destroyMe [
 	"Fonction tester et OK"
 	^self ffiCall: #(int rclc_destroy_node(self))
 ]
 
+{ #category : #spin }
+ROS2_Node >> spinFunction [
+	self spinMeTimeout: self spinTimeout.
+	(Delay forMilliseconds: self delayBetweenSpin) wait.
+]
+
 { #category : #'pubs_subs' }
 ROS2_Node >> spinMeTimeout: anInteger [
 	^self ffiCall: #(void rclc_spin_node_once(self, int anInteger))
+]
+
+{ #category : #spin }
+ROS2_Node >> spinTimeout [
+	"Timeout for each spin in milliseconds"
+	^200
+]
+
+{ #category : #spin }
+ROS2_Node >> startSpin [
+	"Start the spining thread"
+	(spinThread) ifNil: [ 
+		spinThread := [ self spinFunction ] fork.
+	]
+]
+
+{ #category : #spin }
+ROS2_Node >> stopSpin [
+	"Stop the spinning thread"
+	(spinThread) ifNotNil: [ 
+		spinThread terminate.
+		spinThread := nil.
+	]
 ]
