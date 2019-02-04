@@ -65,9 +65,6 @@ PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
 	Type[]
 	Type[n]
 	"
-	
-	self haltIf: (aLine at: 1)=$f.
-	
 	^((aLine at: 1) == $#) ifTrue: [ '' ]
 	ifFalse:
 	[ 
