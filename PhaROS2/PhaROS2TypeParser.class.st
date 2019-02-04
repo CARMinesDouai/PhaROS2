@@ -15,9 +15,11 @@ PhaROS2TypeParser class >> computeClassName: aType [
 { #category : #parsing }
 PhaROS2TypeParser class >> computeClassName: aType package: aPackage [
 	|tmp|
-	tmp := aPackage,'/',aPackage.
-	tmp := tmp capitalized.
-	tmp := tmp replaceAll: $/ by: $_.
+	(PhaROS2_Type isPrimitive: aType) ifTrue: [ ^PhaROS2_Type toUFFIName: aType ] ifFalse: [ 
+		tmp := aPackage,'/',aType.
+		tmp := tmp capitalized.
+		tmp := tmp replaceAll: $/ with: $_.
+	].
 	^tmp
 ]
 
@@ -28,16 +30,18 @@ PhaROS2TypeParser class >> computeFieldsDescOf: aType package: aPackage [
 	output := (PipeableOSProcess command: 'ros2 msg show ',aType)output.
 	(output isEmpty) ifTrue: [ self error: 'Type empty or not exist on ',aType ]
 	ifFalse: [ 
-			output linesDo: [ :line | (line isEmpty) ifFalse: [part := self parseROS2Line: line package: aPackage. part isEmpty ifFalse: [ field := part, ';', String lf ]]].
+			output linesDo: [ :line | (line isEmpty) ifFalse: [part := self parseROS2Line: line package: aPackage. part isEmpty ifFalse: [ field := field, part, ';', String lf ]]].
 		 ].
 	^'^#(',String lf,field,String lf,')'
 ]
 
 { #category : #parsing }
 PhaROS2TypeParser class >> computeROS2Name: aType package: aPackage [
-	|tmp|
-	tmp := aPackage,'/',aType.
-	^tmp
+	| tmp |
+	tmp := (aType indexOf: $/) == 0
+		ifTrue: [ aPackage , '/' , aType ]
+		ifFalse: [ aType ].
+	^ tmp
 ]
 
 { #category : #parsing }
@@ -52,7 +56,7 @@ PhaROS2TypeParser class >> extractTypeNameOf: aType [
 
 { #category : #parsing }
 PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
-	| typeName isPrimitive openBraket closeBraket innerType typeType vPhaROS2Class |
+	| typeName isPrimitive openBraket closeBraket innerType typeType vPhaROS2Class typeClass|
 	"Different possibiliy:
 	
 	Start with # --> Commented so just pass.
@@ -61,18 +65,22 @@ PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
 	Type[]
 	Type[n]
 	"
+	
+	self haltIf: (aLine at: 1)=$f.
+	
 	^((aLine at: 1) == $#) ifTrue: [ '' ]
 	ifFalse:
 	[ 
 		typeType := (aLine substrings: ' ') at: 1.
 		typeName := (aLine substrings: ' ') at: 2.
-		isPrimitive := (ROS2Type primitiveTypes includes: typeType).
+		typeClass := PhaROS2TypeParser computeClassName: ((typeType substrings: '[') at:1) package: aPackage.
 		openBraket := aLine indexOf: $[.
+		isPrimitive := (PhaROS2_Type isPrimitive: ((typeType substrings: '[') at:1)).
 		openBraket = 0 ifTrue: [ 
 			" Is a common type "
 			isPrimitive ifTrue: [ 
 				"Is a primitive type"
-				^typeType, String space, typeName
+				^typeClass, String space, typeName
 			]
 			ifFalse:
 			[
@@ -87,7 +95,7 @@ PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
 		openBraket + 1 = closeBraket  ifTrue: [ 
 		" Is a typed array  "
 			isPrimitive ifTrue: [ 
-					^typeType,$*, String space, typeName
+					^typeClass,$*, String space, typeName
 				 ]
 			ifFalse: [ 
 					vPhaROS2Class := PhaROS2TypeBrowser instance need: (PhaROS2TypeParser computeROS2Name: typeType package: aPackage).
@@ -96,11 +104,11 @@ PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
 	 	] ifFalse: [ 
 			" Is a typed array with fixed size "
 			isPrimitive ifTrue: [ 
-					^typeType,$*, String space, typeName
+					^typeClass,'*', String space, typeName
 				 ]
 			ifFalse: [ 
 				vPhaROS2Class := PhaROS2TypeBrowser instance need: (PhaROS2TypeParser computeROS2Name: typeType package: aPackage).
-				^vPhaROS2Class name,$*,String space,typeName.
+				^vPhaROS2Class name,'*',String space,typeName.
 			 ]
 		 ].
 	 ]
@@ -114,7 +122,7 @@ PhaROS2TypeParser class >> parseROS2Type: aType [
 	vname := self extractTypeNameOf: aType.
 	vclassName := self computeClassName: aType.
 	fieldsDesc := self computeFieldsDescOf: aType package: vdomain.
-	Transcript crShow: fieldsDesc.
+	Transcript crShow:'Class name: ';show: vclassName;crShow: fieldsDesc.
 	vclass := PhaROS2_Type
 				subclass: vclassName asSymbol
 				instanceVariableNames: ''

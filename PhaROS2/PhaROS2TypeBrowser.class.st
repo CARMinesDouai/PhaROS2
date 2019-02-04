@@ -22,7 +22,7 @@ PhaROS2TypeBrowser class >> new [
 
 { #category : #initialization }
 PhaROS2TypeBrowser class >> reset [ 
-	PhaROS2_Type allSubclassesDo: [ :class | class removeFromSystem ].
+	PhaROS2_Type allSubclassesDo: [ :class | Transcript crShow: 'Delete class: ';show: class name. class removeFromSystem ].
 	instance := nil.
 ]
 
@@ -46,25 +46,11 @@ PhaROS2TypeBrowser >> need: aROS2Type [
 
 { #category : #Initialization }
 PhaROS2TypeBrowser >> populateDict [
-	ROS2Type subclassesDo: [ :sub | browse at: sub name put: sub].
+	PhaROS2_Type subclassesDo: [ :sub | browse at: sub name put: sub].
 ]
 
 { #category : #ROS2 }
 PhaROS2TypeBrowser >> ros2Type: aType [
+	Transcript crShow: 'Ask for type: ';show: aType.
 	^browse at: aType ifAbsent: [PhaROS2TypeParser parseROS2Type: (aType asString).]
-]
-
-{ #category : #ROS2 }
-PhaROS2TypeBrowser >> typeSearch: aRos2Type [
-	| returned |
-	returned := Dictionary new.
-	aRos2Type
-		linesDo: [ :line | 
-			line isNotEmpty
-				ifTrue: [ (((line at: 1) == $#) not)
-						ifTrue: [ returned at: ((line substrings: ' ') at: 2) put: ((line substrings: ' ') at: 1) ]
-						]
-					].
-	^returned
-				
 ]

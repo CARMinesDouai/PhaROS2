@@ -40,7 +40,7 @@ PhaROS2TypeTest >> setUp [
 	
 	msgType := self msgClass.
 	
-	callback := ROS2_Subscriber_callback on: [ :receivedData | self callback: (ROS2Type fromHandle: receivedData)].
+	callback := ROS2_Subscriber_callback on: [ :receivedData | self callback: (PhaROS2_Type  fromHandle: receivedData)].
 	
 	subscriber := node createSubscriber: subsName queueSize: 10 messageType: msgType callback: callback ignoreLocalPublication: true.
 	publisher := node createPublisher: pubName queueSize: 10 messageType: msgType.
