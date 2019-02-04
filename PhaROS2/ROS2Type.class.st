@@ -22,8 +22,16 @@ ROS2Type class >> primitiveTypes [
 	^#(
 		string,
 		float64,
-		byte
-		
+		float32,
+		byte,
+		int64,
+		int32,
+		int16,
+		int8,
+		uint8,
+		uint16,
+		uint32,
+		uint64
 	)
 ]
 

@@ -22,7 +22,7 @@ PhaROS2TypeBrowser class >> new [
 
 { #category : #initialization }
 PhaROS2TypeBrowser class >> reset [ 
-	"PhaROS2_Type allSubclassesDo: [ :class | class remove ]."
+	PhaROS2_Type allSubclassesDo: [ :class | class removeFromSystem ].
 	instance := nil.
 ]
 
@@ -53,30 +53,31 @@ PhaROS2TypeBrowser >> rosType: aType [
 		ifAbsentPut: [ 
 			Transcript crShow: 'Type search: '; show: aType; cr.
 			typeExpand := (PipeableOSProcess command: 'ros2 msg show ' , aType) output.
+			typeExpand isEmpty ifTrue: [ self error: 'Type not found or empty' ].
 			type := self typeSearch: typeExpand.
 			type keysDo: [ :key | 
 					value := type at: key.
 					(ROS2Type primitiveTypes includes: value) ifTrue: [
 						Transcript crShow: 'Value: ',value,' is primitive'. 
-						fieldDesc := fieldDesc , String lf , String tab , value , String space , key , ';'
+						fieldDesc := fieldDesc, String lf , String tab , value , String space , key , ';'
 						]
 					ifFalse: [
 						browse
 							at: typeDomain , '/' , value
 							ifAbsent: [ self rosType: typeDomain , '/' , value ].
-							fieldDesc := fieldDesc , String lf , String tab , typeDomain , '_' , value , String space , key , ';'
+							fieldDesc := fieldDesc, String lf , String tab , typeDomain capitalized , '_' , value , String space , key , ';'
 							].
 				].
 			fieldDesc := fieldDesc , String lf , ')'.
 			
-			class := ROS2Type
+			class := PhaROS2_Type
 				subclass: className asSymbol
 				instanceVariableNames: ''
 				classVariableNames: ''
 				package: 'PhaROS2-Type'.
 				
-			class class compile: 'fieldDesc ' , fieldDesc.
-			
+			class class compile: 'fieldsDesc ',String lf , fieldDesc.
+			class rebuildFieldAccessors.
 			class ]
 ]
 
