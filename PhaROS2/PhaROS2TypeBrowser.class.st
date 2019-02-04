@@ -23,6 +23,7 @@ PhaROS2TypeBrowser class >> new [
 { #category : #initialization }
 PhaROS2TypeBrowser class >> reset [ 
 	PhaROS2_Type allSubclassesDo: [ :class | Transcript crShow: 'Delete class: ';show: class name. class removeFromSystem ].
+	ROS2_TypeSupport_struct allSubclassesDo: [ :class | Transcript crShow: 'Delete class: ';show: class name. class removeFromSystem ].
 	instance := nil.
 ]
 

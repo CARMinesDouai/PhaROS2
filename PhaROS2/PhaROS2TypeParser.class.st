@@ -62,8 +62,8 @@ PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
 	Start with # --> Commented so just pass.
 	
 	Type
-	Type[]
-	Type[n]
+	Type[]		Gerer de la même maniere pour l'instant
+	Type[n]	Gerer de la même maniere pour l'instant
 	"
 	^((aLine at: 1) == $#) ifTrue: [ '' ]
 	ifFalse:
@@ -114,7 +114,7 @@ PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
 
 { #category : #parsing }
 PhaROS2TypeParser class >> parseROS2Type: aType [
-	| vdomain vname vclassName fieldsDesc vclass|
+	| vdomain vname vclassName fieldsDesc vclass zClass|
 	vdomain := self extractDomainOf: aType.
 	vname := self extractTypeNameOf: aType.
 	vclassName := self computeClassName: aType.
@@ -127,5 +127,13 @@ PhaROS2TypeParser class >> parseROS2Type: aType [
 				package: 'PhaROS2-Type'.
 	vclass class compile: 'fieldsDesc ',String lf , fieldsDesc.
 	vclass rebuildFieldAccessors.
+	zClass := ROS2_TypeSupport_struct 
+				subclass: vclassName,'_struct' asSymbol
+				instanceVariableNames: ''
+				classVariableNames: ''
+				package: 'PhaROS2-Struct'.
+	
+	zClass class compile: 'fieldsDesc ',String lf, '^#(',String lf,vclass name,'* rosidl_message_type_support; int sizeof;)'.
+	zClass rebuildFieldAccessors.
 	^vclass
 ]
