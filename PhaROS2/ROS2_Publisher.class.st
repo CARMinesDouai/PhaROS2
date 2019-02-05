@@ -5,7 +5,8 @@ Class {
 		'parentNode',
 		'topicName',
 		'typeSupportName',
-		'typeSupportStruct'
+		'typeSupportStruct',
+		'queueSize'
 	],
 	#category : #'PhaROS2-Objects'
 }
@@ -41,12 +42,24 @@ ROS2_Publisher >> publish: aMsg [
 	^self ffiCall: #(int rclc_publish(self, void * aMsg))
 ]
 
+{ #category : #accessing }
+ROS2_Publisher >> queueSize [
+	^queueSize 
+]
+
+{ #category : #accessing }
+ROS2_Publisher >> queueSize: anInt [
+	queueSize := anInt
+]
+
 { #category : #initialization }
 ROS2_Publisher >> registerPub [
 	|vHandle|
 	(parentNode) ifNotNil: [ 
 		vHandle := parentNode createPublisher: self.
 		(vHandle) ifNotNil: [ self setHandle: vHandle ]
+		 ] ifNil: [ 
+			self error: 'Cannot register a publisher without a parentNode'.
 		 ]
 ]
 
@@ -74,5 +87,11 @@ ROS2_Publisher >> typeSupportName: anTypeSupportName [
 		- geometry_msgs/Twist
 	"
 	
-	typeSupportName := anTypeSupportName
+	typeSupportName := anTypeSupportName.
+	typeSupportStruct := PhaROS2TypeBrowser instance need: typeSupportName getStruct.
+]
+
+{ #category : #accessing }
+ROS2_Publisher >> typeSupportStruct [
+	^typeSupportStruct 
 ]

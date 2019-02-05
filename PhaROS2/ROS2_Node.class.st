@@ -4,8 +4,8 @@ Class {
 	#instVars : [
 		'thread',
 		'spinThread',
-		'subcriber',
-		'publisher'
+		'subscribers',
+		'publishers'
 	],
 	#category : #'PhaROS2-Objects'
 }
@@ -18,20 +18,20 @@ ROS2_Node class >> new: aTopicName namespace: aNamespace [
 
 { #category : #pubs }
 ROS2_Node >> createPublisher: aPublisher [
-	
+	| vHandle |
+	aPublisher parentNode: self.
+	publishers add: aPublisher.
+	vHandle := self ffiCreatePublisher: aPublisher topicName queueSize: aPublisher queueSize messageType: aPublisher typeSupportStruct.
+	^vHandle
 ]
 
 { #category : #subs }
 ROS2_Node >> createSubcriber: aSubscriber [
-	
-]
-
-{ #category : #subs }
-ROS2_Node >> createSubscriber: aName queueSize: anInt messageType: aMessageType aCallbackBlock: aBlock [
-	|callback|
-	callback := ROS2_Callback on: aBlock.
-	self ffiCreateSubscriber: aName queueSize: anInt messageType: aMessageType callback: callback.
-	^callback
+	| vHandle |
+	aSubscriber parentNode: self.
+	subscribers add: aSubscriber.
+	vHandle := self ffiCreateSubscriber: aSubscriber topicName queueSize: aSubscriber queueSize messageType: aSubscriber typeSupportStruct callback: aSubscriber callback ignoreLocalPublication: aSubscriber ignoreLocalPublication.
+	^vHandle
 ]
 
 { #category : #spin }
@@ -42,8 +42,8 @@ ROS2_Node >> delayBetweenSpin [
 
 { #category : #initialization }
 ROS2_Node >> destroyNode [
-	publisher do: [ :aPub | aPub destroyPub. ].
-	subcriber do: [ :aSub | aSub destroySub. ].
+	publishers do: [ :aPub | aPub destroyPub. ].
+	subscribers do: [ :aSub | aSub destroySub. ].
 	
 	spinThread ifNotNil: [ spinThread terminate ].
 	
@@ -81,8 +81,8 @@ ROS2_Node >> ffiSpinMeTimeout: anInteger [
 ROS2_Node >> initialize [
 	super initialize.
 	
-	publisher := OrderedCollection new.
-	subcriber := OrderedCollection new.
+	publishers := OrderedCollection new.
+	subscribers := OrderedCollection new.
 ]
 
 { #category : #naming }

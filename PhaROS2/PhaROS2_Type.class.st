@@ -37,3 +37,8 @@ PhaROS2_Type class >> toUFFIName: aPrimitiveType [
 		 ].
 	^ret.
 ]
+
+{ #category : #primitive }
+PhaROS2_Type class >> typeSupport [
+	self subclassResponsibility 
+]
