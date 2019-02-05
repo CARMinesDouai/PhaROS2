@@ -12,7 +12,10 @@ ROS2_Node_Struct class >> new: aTopicName namespace: aNamespace [
 
 { #category : #uffi }
 ROS2_Node_Struct >> ffiCreatePublisher: aName queueSize: anInt messageType: aMessageType [
-	^self ffiCall: #(#ROS2_Publisher_Struct rclc_create_publisher(self, #aMessageType class name aMessageType , char * aName, int anInt)).
+	| array |
+	array := #(#ROS2_Publisher_Struct rclc_create_publisher(self, void aMessageType , char * aName, int anInt)).
+	(array at: 3) at: 3 put: aMessageType class name asSymbol.
+	^self ffiCall: #(#ROS2_Publisher_Struct rclc_create_publisher(self, Std_msgs_String_struct aMessageType , char * aName, int anInt))..
 ]
 
 { #category : #uffi }

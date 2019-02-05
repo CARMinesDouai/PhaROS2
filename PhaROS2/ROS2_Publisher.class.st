@@ -85,6 +85,9 @@ ROS2_Publisher >> typeSupportName: aROS2TypeSupport [
 	"
 	typeSupportName := aROS2TypeSupport.
 	typeSupportStruct := (PhaROS2TypeBrowser instance need: typeSupportName) typeSupport externalNew.
+	typeSupportStruct sizeof: (typeSupportStruct class byteSize).
+	1 halt.
+	"typeSupportStruct := RCLC getMessageStringTypeSupport ."
 	
 ]
 
