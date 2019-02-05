@@ -1,7 +1,7 @@
 Class {
 	#name : #'ROS2_Subscriber_callback',
 	#superclass : #'ROS2_Callback',
-	#category : #'PhaROS2-Objects'
+	#category : #'PhaROS2-Struct'
 }
 
 { #category : #native }

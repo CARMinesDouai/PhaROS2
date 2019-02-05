@@ -8,7 +8,7 @@ Class {
 RCLC class >> createNode: nodeName namespace: aNamespace [
 	" Fonction tester et OK "
 	(self status) ifFalse: [ self initNoArgs ].
-	^self ffiCall: #(ROS2_Node rclc_create_node(String nodeName, String aNamespace))
+	^self ffiCall: #(#ROS2_Node_Struct rclc_create_node(String nodeName, String aNamespace))
 ]
 
 { #category : #native }

@@ -1,27 +1,19 @@
 Class {
 	#name : #'ROS2_Node',
-	#superclass : #ROS2Handle,
+	#superclass : #'ROS2_Object',
 	#instVars : [
+		'nodeStruct',
 		'thread',
 		'spinThread',
 		'subscribers',
-		'publishers'
+		'publishers',
+		'namespace',
+		'nodeName'
 	],
 	#category : #'PhaROS2-Objects'
 }
 
-{ #category : #Factory }
-ROS2_Node class >> ffiDestroyNode: anHandle [
-	^self ffiCall: #(int rclc_destroy_node(void * anHandle))
-]
-
-{ #category : #Factory }
-ROS2_Node class >> new: aTopicName namespace: aNamespace [
-	(RCLC status) ifFalse: [ RCLC initNoArgs. ].
-	^RCLC createNode: aTopicName namespace: aNamespace 
-]
-
-{ #category : #pubs }
+{ #category : #publishers }
 ROS2_Node >> createPublisher: aPublisher [
 	| vHandle |
 	aPublisher parentNode: self.
@@ -30,7 +22,7 @@ ROS2_Node >> createPublisher: aPublisher [
 	^vHandle
 ]
 
-{ #category : #subs }
+{ #category : #subscribers }
 ROS2_Node >> createSubcriber: aSubscriber [
 	| vHandle |
 	aSubscriber parentNode: self.
@@ -52,34 +44,7 @@ ROS2_Node >> destroyNode [
 	
 	spinThread ifNotNil: [ spinThread terminate ].
 	
-	self ffiDestroyNode.
-]
-
-{ #category : #uffi }
-ROS2_Node >> ffiCreatePublisher: aName queueSize: anInt messageType: aMessageType [
-	^self ffiCall: #(ROS2_Publisher rclc_create_publisher(self, ROS2_TypeSupport_struct aMessageType , char * aName, int anInt)).
-]
-
-{ #category : #uffi }
-ROS2_Node >> ffiCreateSubscriber: aTopicName queueSize: anInt messageType: aMessageType callback: aROS2_subscriber_callback ignoreLocalPublication: aBoolean [
-	^self ffiCall: #(ROS2_Subscriber * rclc_create_subscription(
-  self,
-  ROS2_TypeSupport_struct aMessageType,
-  String aTopicName,
-  ROS2_Subscriber_callback aROS2_subscriber_callback,
-  int anInt,
-  bool aBoolean))
-]
-
-{ #category : #uffi }
-ROS2_Node >> ffiDestroyNode [
-	"Fonction tester et OK"
-	^ROS2_Node ffiDestroyNode: self getHandle.
-]
-
-{ #category : #uffi }
-ROS2_Node >> ffiSpinMeTimeout: anInteger [
-	^self ffiCall: #(void rclc_spin_node_once(self, int anInteger))
+	nodeStruct ffiDestroyNode.
 ]
 
 { #category : #initialization }
@@ -90,26 +55,39 @@ ROS2_Node >> initialize [
 	subscribers := OrderedCollection new.
 ]
 
-{ #category : #naming }
+{ #category : #accessing }
 ROS2_Node >> namespace [
-	self subclassResponsibility
+	^ namespace
 ]
 
-{ #category : #naming }
+{ #category : #accessing }
+ROS2_Node >> namespace: anObject [
+	namespace := anObject
+]
+
+{ #category : #accessing }
 ROS2_Node >> nodeName [
-	self subclassResponsibility
+	^ nodeName
 ]
 
-{ #category : #uffi }
+{ #category : #accessing }
+ROS2_Node >> nodeName: anObject [
+	nodeName := anObject
+]
+
+{ #category : #accessing }
+ROS2_Node >> publishers [
+	^ publishers
+]
+
+{ #category : #ROS2 }
 ROS2_Node >> registerNode [
-	| vHandle |
-	vHandle := (RCLC createNode: self nodeName namespace: self namespace).
-	self handle: vHandle.
+	nodeStruct := (RCLC createNode: self nodeName namespace: self namespace).
 ]
 
 { #category : #spin }
 ROS2_Node >> spinFunction [
-	self ffiSpinMeTimeout: self spinTimeout.
+	nodeStruct ffiSpinMeTimeout: self spinTimeout.
 	(Delay forMilliseconds: self delayBetweenSpin) wait.
 ]
 
@@ -134,4 +112,9 @@ ROS2_Node >> stopSpin [
 		spinThread terminate.
 		spinThread := nil.
 	]
+]
+
+{ #category : #accessing }
+ROS2_Node >> subscribers [
+	^ subscribers
 ]

@@ -1,7 +1,7 @@
 Class {
 	#name : #'ROS2_Callback',
 	#superclass : #FFICallback,
-	#category : #'PhaROS2-Objects'
+	#category : #'PhaROS2-Struct'
 }
 
 { #category : #native }

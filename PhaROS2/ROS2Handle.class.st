@@ -1,7 +1,7 @@
 Class {
 	#name : #ROS2Handle,
 	#superclass : #FFIExternalObject,
-	#category : #'PhaROS2-Objects'
+	#category : #'PhaROS2-Struct'
 }
 
 { #category : #native }
