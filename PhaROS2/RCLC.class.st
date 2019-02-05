@@ -56,7 +56,7 @@ RCLC class >> getMessageString: aString [
 
 { #category : #native }
 RCLC class >> getMessageStringTypeSupport [ 
-	^self ffiCall: #(ROS2_TypeSupport_struct getStringTypeSupport())
+	^self ffiCall: #(Std_msgs_String_struct getStringTypeSupport())
 ]
 
 { #category : #native }

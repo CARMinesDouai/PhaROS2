@@ -126,8 +126,8 @@ PhaROS2TypeParser class >> parseROS2Type: aType [
 				classVariableNames: ''
 				package: 'PhaROS2-Struct'.
 	
-	zClass class compile: 'fieldsDesc ',String lf, '^#(',String lf,vclass name,'* rosidl_message_type_support; int sizeof;)'.
-	zClass rebuildFieldAccessors.
+	zClass class compile: 'fieldsDesc ',String lf, '^#(',String lf,vclassName,'* rosidl_message_type_support; int sizeof;)'.
+	
 	vclass := PhaROS2_Type
 				subclass: vclassName asSymbol
 				instanceVariableNames: ''
@@ -135,7 +135,8 @@ PhaROS2TypeParser class >> parseROS2Type: aType [
 				package: 'PhaROS2-Type'.
 	vclass class compile: 'fieldsDesc ',String lf , fieldsDesc.
 	vclass class compile: 'typeSupport', String lf, '^', zClass name.
-	vclass rebuildFieldAccessors.
 	
+	vclass rebuildFieldAccessors.
+	zClass rebuildFieldAccessors.
 	^vclass
 ]

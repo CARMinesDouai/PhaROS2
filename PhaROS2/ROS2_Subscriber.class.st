@@ -89,13 +89,3 @@ ROS2_Subscriber >> typeSupportName [
 ROS2_Subscriber >> typeSupportName: anObject [
 	typeSupportName := anObject
 ]
-
-{ #category : #accessing }
-ROS2_Subscriber >> typeSupportStruct [
-	^ typeSupportStruct
-]
-
-{ #category : #accessing }
-ROS2_Subscriber >> typeSupportStruct: anObject [
-	typeSupportStruct := anObject
-]

@@ -13,7 +13,7 @@ Class {
 }
 
 { #category : #initialization }
-ROS2_Publisher >> destroyPub [
+ROS2_Publisher >> destroyPublisher [
 	publisherStruct ffiDestroy.
 ]
 
@@ -48,7 +48,7 @@ ROS2_Publisher >> queueSize: anObject [
 ]
 
 { #category : #initialization }
-ROS2_Publisher >> registerPub [
+ROS2_Publisher >> registerPublisher [
 	|vHandle|
 	(parentNode) ifNotNil: [ 
 		vHandle := parentNode createPublisher: self.
@@ -74,16 +74,21 @@ ROS2_Publisher >> typeSupportName [
 ]
 
 { #category : #accessing }
-ROS2_Publisher >> typeSupportName: anObject [
-	typeSupportName := anObject
+ROS2_Publisher >> typeSupportName: aROS2TypeSupport [
+	"
+	Any Type support
+	You can find all Type with ros2 msg show command
+	
+	Example of type:
+		- std_msgs/String
+		- geometry_msgs/Twist
+	"
+	typeSupportName := aROS2TypeSupport.
+	typeSupportStruct := (PhaROS2TypeBrowser instance need: typeSupportName) typeSupport externalNew.
+	
 ]
 
 { #category : #accessing }
 ROS2_Publisher >> typeSupportStruct [
 	^ typeSupportStruct
-]
-
-{ #category : #accessing }
-ROS2_Publisher >> typeSupportStruct: anObject [
-	typeSupportStruct := anObject
 ]

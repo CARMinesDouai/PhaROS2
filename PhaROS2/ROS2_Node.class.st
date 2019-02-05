@@ -18,7 +18,7 @@ ROS2_Node >> createPublisher: aPublisher [
 	| vHandle |
 	aPublisher parentNode: self.
 	publishers add: aPublisher.
-	vHandle := self ffiCreatePublisher: aPublisher topicName queueSize: aPublisher queueSize messageType: aPublisher typeSupportStruct.
+	vHandle := nodeStruct ffiCreatePublisher: aPublisher topicName queueSize: aPublisher queueSize messageType: aPublisher typeSupportStruct.
 	^vHandle
 ]
 
@@ -39,7 +39,7 @@ ROS2_Node >> delayBetweenSpin [
 
 { #category : #initialization }
 ROS2_Node >> destroyNode [
-	publishers do: [ :aPub | aPub destroyPub. ].
+	publishers do: [ :aPub | aPub destroyPublisher. ].
 	subscribers do: [ :aSub | aSub destroySub. ].
 	
 	spinThread ifNotNil: [ spinThread terminate ].

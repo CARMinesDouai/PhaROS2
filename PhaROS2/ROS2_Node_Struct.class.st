@@ -12,7 +12,7 @@ ROS2_Node_Struct class >> new: aTopicName namespace: aNamespace [
 
 { #category : #uffi }
 ROS2_Node_Struct >> ffiCreatePublisher: aName queueSize: anInt messageType: aMessageType [
-	^self ffiCall: #(#ROS2_Publisher_Struct rclc_create_publisher(self, ROS2_TypeSupport_struct aMessageType , char * aName, int anInt)).
+	^self ffiCall: #(#ROS2_Publisher_Struct rclc_create_publisher(self, #aMessageType class name aMessageType , char * aName, int anInt)).
 ]
 
 { #category : #uffi }

@@ -1,13 +1,6 @@
 Class {
 	#name : #'ROS2_Publisher_Struct',
 	#superclass : #ROS2Handle,
-	#instVars : [
-		'parentNode',
-		'topicName',
-		'typeSupportName',
-		'typeSupportStruct',
-		'queueSize'
-	],
 	#category : #'PhaROS2-Struct'
 }
 
