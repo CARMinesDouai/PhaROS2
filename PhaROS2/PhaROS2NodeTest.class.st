@@ -17,7 +17,7 @@ PhaROS2NodeTest >> createNode [
 
 { #category : #test }
 PhaROS2NodeTest >> deleteNode [
-	node ifNotNil: [ node destroyMe ]
+	node ifNotNil: [ node ffiDestroyNode ]
 ]
 
 { #category : #test }

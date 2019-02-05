@@ -15,20 +15,26 @@ ROS2_Node class >> new: aTopicName namespace: aNamespace [
 ]
 
 { #category : #'pubs_subs' }
-ROS2_Node >> createPublisher: aName queueSize: anInt messageType: aMessageType [
-	^self ffiCall: #(ROS2_Publisher rclc_create_publisher(self, ROS2_TypeSupport_struct aMessageType , char * aName, int anInt)).
-]
-
-{ #category : #'pubs_subs' }
 ROS2_Node >> createSubscriber: aName queueSize: anInt messageType: aMessageType aCallbackBlock: aBlock [
 	|callback|
 	callback := ROS2_Callback on: aBlock.
-	self createSubscriber: aName queueSize: anInt messageType: aMessageType callback: callback.
+	self ffiCreateSubscriber: aName queueSize: anInt messageType: aMessageType callback: callback.
 	^callback
 ]
 
-{ #category : #'pubs_subs' }
-ROS2_Node >> createSubscriber: aTopicName queueSize: anInt messageType: aMessageType callback: aROS2_subscriber_callback ignoreLocalPublication: aBoolean [
+{ #category : #spin }
+ROS2_Node >> delayBetweenSpin [
+	"The time between 2 spin"
+	^10
+]
+
+{ #category : #uffi }
+ROS2_Node >> ffiCreatePublisher: aName queueSize: anInt messageType: aMessageType [
+	^self ffiCall: #(ROS2_Publisher rclc_create_publisher(self, ROS2_TypeSupport_struct aMessageType , char * aName, int anInt)).
+]
+
+{ #category : #uffi }
+ROS2_Node >> ffiCreateSubscriber: aTopicName queueSize: anInt messageType: aMessageType callback: aROS2_subscriber_callback ignoreLocalPublication: aBoolean [
 	^self ffiCall: #(ROS2_Subscriber * rclc_create_subscription(
   self,
   ROS2_TypeSupport_struct aMessageType,
@@ -38,27 +44,31 @@ ROS2_Node >> createSubscriber: aTopicName queueSize: anInt messageType: aMessage
   bool aBoolean))
 ]
 
-{ #category : #spin }
-ROS2_Node >> delayBetweenSpin [
-	"The time between 2 spin"
-	^10
-]
-
-{ #category : #'pubs_subs' }
-ROS2_Node >> destroyMe [
+{ #category : #uffi }
+ROS2_Node >> ffiDestroyNode [
 	"Fonction tester et OK"
 	^self ffiCall: #(int rclc_destroy_node(self))
 ]
 
-{ #category : #spin }
-ROS2_Node >> spinFunction [
-	self spinMeTimeout: self spinTimeout.
-	(Delay forMilliseconds: self delayBetweenSpin) wait.
+{ #category : #uffi }
+ROS2_Node >> ffiSpinMeTimeout: anInteger [
+	^self ffiCall: #(void rclc_spin_node_once(self, int anInteger))
 ]
 
-{ #category : #'pubs_subs' }
-ROS2_Node >> spinMeTimeout: anInteger [
-	^self ffiCall: #(void rclc_spin_node_once(self, int anInteger))
+{ #category : #naming }
+ROS2_Node >> namespace [
+	self subclassResponsibility
+]
+
+{ #category : #naming }
+ROS2_Node >> nodeName [
+	self subclassResponsibility
+]
+
+{ #category : #spin }
+ROS2_Node >> spinFunction [
+	self ffiSpinMeTimeout: self spinTimeout.
+	(Delay forMilliseconds: self delayBetweenSpin) wait.
 ]
 
 { #category : #spin }
