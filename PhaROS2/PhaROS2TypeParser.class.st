@@ -62,8 +62,8 @@ PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
 	Start with # --> Commented so just pass.
 	
 	Type
-	Type[]		Gerer de la même maniere pour l'instant
-	Type[n]	Gerer de la même maniere pour l'instant
+	Type[]		Juste une *
+	Type[n]	un tableau [n]
 	"
 	^((aLine at: 1) == $#) ifTrue: [ '' ]
 	ifFalse:
@@ -101,11 +101,11 @@ PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
 	 	] ifFalse: [ 
 			" Is a typed array with fixed size "
 			isPrimitive ifTrue: [ 
-					^typeClass,'*', String space, typeName
+					^typeClass,'[',innerType,']', String space, typeName
 				 ]
 			ifFalse: [ 
 				vPhaROS2Class := PhaROS2TypeBrowser instance need: (PhaROS2TypeParser computeROS2Name: typeType package: aPackage).
-				^vPhaROS2Class name,'*',String space,typeName.
+				^vPhaROS2Class name,'[',innerType,']',String space,typeName.
 			 ]
 		 ].
 	 ]
@@ -120,13 +120,6 @@ PhaROS2TypeParser class >> parseROS2Type: aType [
 	vclassName := self computeClassName: aType.
 	fieldsDesc := self computeFieldsDescOf: aType package: vdomain.
 	Transcript crShow:'Class name: ';show: vclassName;crShow: fieldsDesc.
-	vclass := PhaROS2_Type
-				subclass: vclassName asSymbol
-				instanceVariableNames: ''
-				classVariableNames: ''
-				package: 'PhaROS2-Type'.
-	vclass class compile: 'fieldsDesc ',String lf , fieldsDesc.
-	vclass rebuildFieldAccessors.
 	zClass := ROS2_TypeSupport_struct 
 				subclass: vclassName,'_struct' asSymbol
 				instanceVariableNames: ''
@@ -135,5 +128,14 @@ PhaROS2TypeParser class >> parseROS2Type: aType [
 	
 	zClass class compile: 'fieldsDesc ',String lf, '^#(',String lf,vclass name,'* rosidl_message_type_support; int sizeof;)'.
 	zClass rebuildFieldAccessors.
+	vclass := PhaROS2_Type
+				subclass: vclassName asSymbol
+				instanceVariableNames: ''
+				classVariableNames: ''
+				package: 'PhaROS2-Type'.
+	vclass class compile: 'fieldsDesc ',String lf , fieldsDesc.
+	vclass class compile: 'typeSupport', String lf, '^', zClass name.
+	vclass rebuildFieldAccessors.
+	
 	^vclass
 ]
