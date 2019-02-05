@@ -3,7 +3,9 @@ Class {
 	#superclass : #ROS2Handle,
 	#instVars : [
 		'thread',
-		'spinThread'
+		'spinThread',
+		'subcriber',
+		'publisher'
 	],
 	#category : #'PhaROS2-Objects'
 }
@@ -14,7 +16,17 @@ ROS2_Node class >> new: aTopicName namespace: aNamespace [
 	^RCLC createNode: aTopicName namespace: aNamespace 
 ]
 
-{ #category : #'pubs_subs' }
+{ #category : #pubs }
+ROS2_Node >> createPublisher: aPublisher [
+	
+]
+
+{ #category : #subs }
+ROS2_Node >> createSubcriber: aSubscriber [
+	
+]
+
+{ #category : #subs }
 ROS2_Node >> createSubscriber: aName queueSize: anInt messageType: aMessageType aCallbackBlock: aBlock [
 	|callback|
 	callback := ROS2_Callback on: aBlock.
@@ -26,6 +38,16 @@ ROS2_Node >> createSubscriber: aName queueSize: anInt messageType: aMessageType 
 ROS2_Node >> delayBetweenSpin [
 	"The time between 2 spin"
 	^10
+]
+
+{ #category : #initialization }
+ROS2_Node >> destroyNode [
+	publisher do: [ :aPub | aPub destroyPub. ].
+	subcriber do: [ :aSub | aSub destroySub. ].
+	
+	spinThread ifNotNil: [ spinThread terminate ].
+	
+	self ffiDestroyNode.
 ]
 
 { #category : #uffi }
@@ -55,6 +77,14 @@ ROS2_Node >> ffiSpinMeTimeout: anInteger [
 	^self ffiCall: #(void rclc_spin_node_once(self, int anInteger))
 ]
 
+{ #category : #initialization }
+ROS2_Node >> initialize [
+	super initialize.
+	
+	publisher := OrderedCollection new.
+	subcriber := OrderedCollection new.
+]
+
 { #category : #naming }
 ROS2_Node >> namespace [
 	self subclassResponsibility
@@ -63,6 +93,13 @@ ROS2_Node >> namespace [
 { #category : #naming }
 ROS2_Node >> nodeName [
 	self subclassResponsibility
+]
+
+{ #category : #uffi }
+ROS2_Node >> registerNode [
+	| vHandle |
+	vHandle := (RCLC createNode: self nodeName namespace: self namespace).
+	self handle: vHandle.
 ]
 
 { #category : #spin }
