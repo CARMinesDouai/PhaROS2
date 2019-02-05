@@ -11,6 +11,11 @@ Class {
 }
 
 { #category : #Factory }
+ROS2_Node class >> ffiDestroyNode: anHandle [
+	^self ffiCall: #(int rclc_destroy_node(void * anHandle))
+]
+
+{ #category : #Factory }
 ROS2_Node class >> new: aTopicName namespace: aNamespace [
 	(RCLC status) ifFalse: [ RCLC initNoArgs. ].
 	^RCLC createNode: aTopicName namespace: aNamespace 
@@ -69,7 +74,7 @@ ROS2_Node >> ffiCreateSubscriber: aTopicName queueSize: anInt messageType: aMess
 { #category : #uffi }
 ROS2_Node >> ffiDestroyNode [
 	"Fonction tester et OK"
-	^self ffiCall: #(int rclc_destroy_node(self))
+	^ROS2_Node ffiDestroyNode: self getHandle.
 ]
 
 { #category : #uffi }
