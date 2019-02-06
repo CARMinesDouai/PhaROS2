@@ -32,7 +32,7 @@ PhaROS_Msgs class >> addToIncludes: aType [
 	
 	includePath := '#include "'.
 	tmp := '/' split: aType.
-	tmp insert: 'msgs' before: 2.
+	tmp insert: 'msg' before: 2.
 	
 	1 to: (tmp size-1) do: [ :index | includePath := includePath,(tmp at: index),'/' ].
 	includePath := includePath,(tmp last) uncapitalized,'.h"'.
