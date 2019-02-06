@@ -138,5 +138,8 @@ PhaROS2TypeParser class >> parseROS2Type: aType [
 	
 	vclass rebuildFieldAccessors.
 	zClass rebuildFieldAccessors.
+	
+	PhaROS_Msgs registerNewType: aType.
+	
 	^vclass
 ]

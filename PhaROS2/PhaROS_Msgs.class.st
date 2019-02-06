@@ -8,7 +8,7 @@ Class {
 PhaROS_Msgs class >> addFunction: aType [
 	| writeStream function tmp |
 	tmp := '/' split: aType.
-	function := 'rclc_message_type_support_t ',(self getSignatureOf: aType),'() { return RCLC_GET_MSG_TYPE_SUPPORT('.
+	function := 'rclc_message_type_support_t ',(self signatureOf: aType),'() { return RCLC_GET_MSG_TYPE_SUPPORT('.
 	
 	function := function,tmp first,',msg,',tmp last.
 	
@@ -19,6 +19,11 @@ PhaROS_Msgs class >> addFunction: aType [
 	writeStream nextPutAll: function.
 	writeStream flush.
 	writeStream close.
+]
+
+{ #category : #generation }
+PhaROS_Msgs class >> addGeneratedFunction: aType [
+	PhaROS_Msgs compile: (PhaROS_Msgs signatureOf: aType),String lf,'^self ffiCall: #(ROS2_TypeSupport_struct ',(PhaROS_Msgs signatureOf: aType),'())'.
 ]
 
 { #category : #generation }
@@ -45,7 +50,7 @@ PhaROS_Msgs class >> addToSignature: aType [
 	| writeStream signature |
 	signature := 'rclc_message_type_support_t '.
 	
-	signature := signature,(self getSignatureOf: aType),'();'.
+	signature := signature,(self signatureOf: aType),'();'.
 	
 	writeStream := PhaROS_Msgs pathToSignatures asFileReference writeStream.
 	writeStream setToEnd.
@@ -56,7 +61,10 @@ PhaROS_Msgs class >> addToSignature: aType [
 
 { #category : #generation }
 PhaROS_Msgs class >> amentRecompile [
-	self error:'is in ament recompile'
+	"Command to execute:
+	src/ament_tools/scripts/ament.py build --build-tests --symlink-install --only-packages pharosmsgs
+	"
+	OSProcess waitForCommand: '/home/william/ros2_ws/src/ament_tools/scripts/ament.py build --build-tests --symlink-install --only-packages pharosmsgs'
 ]
 
 { #category : #ffi }
@@ -65,24 +73,6 @@ PhaROS_Msgs class >> ffiLibraryName [
 	 Users should use unix32* or unix64*
 	 "
 	^ '/home/william/ros2_ws/install/lib/libpharosmsgs.so'
-]
-
-{ #category : #ffi }
-PhaROS_Msgs class >> getMessageByteTypeSupport [ 
-	^self ffiCall: #(ROS2_TypeSupport_struct getByteTypeSupport())
-]
-
-{ #category : #ffi }
-PhaROS_Msgs class >> getMessageStringTypeSupport [ 
-	^self ffiCall: #(Std_msgs_String_struct getStringTypeSupport())
-]
-
-{ #category : #signature }
-PhaROS_Msgs class >> getSignatureOf: aType [
-	|tmp|
-	tmp := aType replaceAll: $/ with: $_.
-	tmp uncapitalized.
-	^'get_',tmp
 ]
 
 { #category : #path }
@@ -107,6 +97,22 @@ PhaROS_Msgs class >> registerNewType: aType [
 	self addFunction: aType.
 	
 	self amentRecompile.
+]
+
+{ #category : #generation }
+PhaROS_Msgs class >> resetLib [
+	PhaROS_Msgs pathToIncludes asFileReference ensureDelete writeStreamDo: [ :stream | stream flush;close ].
+	PhaROS_Msgs pathToSignatures asFileReference ensureDelete writeStreamDo: [ :stream | stream flush;close ].
+	PhaROS_Msgs pathToSrc asFileReference ensureDelete writeStreamDo: [ :stream | stream nextPutAll: '#include <pharosmsgs/pharostypes.h>';nextPutAll:String crlfcrlf;flush;close ].
+	PhaROS_Msgs amentRecompile.
+]
+
+{ #category : #signature }
+PhaROS_Msgs class >> signatureOf: aType [
+	|tmp|
+	tmp := aType replaceAll: $/ with: $_.
+	tmp uncapitalized.
+	^'get_',tmp
 ]
 
 { #category : #ffi }
