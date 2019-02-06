@@ -23,7 +23,7 @@ PhaROS_Msgs class >> addFunction: aType [
 
 { #category : #generation }
 PhaROS_Msgs class >> addGeneratedFunction: aType [
-	PhaROS_Msgs class compile: (PhaROS_Msgs signatureOf: aType),String lf,'^self ffiCall: #(ROS2_TypeSupport_struct ',(PhaROS_Msgs signatureOf: aType),'())'.
+	PhaROS_Msgs class compile: (PhaROS_Msgs signatureOf: aType),String lf,'^self ffiCall: #(',(PhaROS2TypeParser computeClassName: (aType copy)),'_struct ',(PhaROS_Msgs signatureOf: aType),'())'.
 ]
 
 { #category : #generation }
