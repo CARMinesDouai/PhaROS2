@@ -15,7 +15,7 @@ RCLC class >> createNode: nodeName namespace: aNamespace [
 RCLC class >> ffiLibraryName [ 
 	"Kept for backward compatibility. 
 	 Users should use unix32* or unix64*
-	 /!\Chemin en dure"
+	 "
 	^ '/home/william/ros2_ws/install/lib/librclc.so'
 ]
 
