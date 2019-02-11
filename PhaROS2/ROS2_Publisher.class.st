@@ -32,6 +32,11 @@ ROS2_Publisher >> parentNode: anObject [
 	parentNode := anObject
 ]
 
+{ #category : #publishing }
+ROS2_Publisher >> publish: aMsg [
+	publisherStruct publish: aMsg getHandle.
+]
+
 { #category : #accessing }
 ROS2_Publisher >> publisherStruct: anObject [
 	^ publisherStruct := anObject
@@ -84,10 +89,8 @@ ROS2_Publisher >> typeSupportName: aROS2TypeSupport [
 		- geometry_msgs/Twist
 	"
 	typeSupportName := aROS2TypeSupport.
-	typeSupportStruct := (PhaROS2TypeBrowser instance need: typeSupportName) typeSupport externalNew.
-	typeSupportStruct sizeof: (typeSupportStruct class byteSize).
-	1 halt.
-	"typeSupportStruct := RCLC getMessageStringTypeSupport ."
+	PhaROS2TypeBrowser instance need: typeSupportName.
+	typeSupportStruct := PhaROS_Msgs typeSupport: typeSupportName.
 	
 ]
 
