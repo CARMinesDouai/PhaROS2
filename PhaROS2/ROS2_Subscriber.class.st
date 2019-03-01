@@ -8,7 +8,8 @@ Class {
 		'callback',
 		'typeSupportName',
 		'typeSupportStruct',
-		'queueSize'
+		'queueSize',
+		'ignoreLocalPublication'
 	],
 	#category : #'PhaROS2-Objects'
 }
@@ -20,13 +21,27 @@ ROS2_Subscriber >> callback [
 
 { #category : #accessing }
 ROS2_Subscriber >> callback: aBlock [
-	"The block excepted when they received a message"
-	callback := aBlock
+	| casting |
+	"
+		The block excepted when they received a message
+		The callback is modified to cast to the correct Type
+	"
+	callback := (ROS2_Subscriber_callback on: [ :data | casting := (self typeSupportStruct class) fromHandle: data .aBlock cull: data] )
 ]
 
 { #category : #initialization }
 ROS2_Subscriber >> destroySub [
 	subscriberStruct ffiDestroy 
+]
+
+{ #category : #accessing }
+ROS2_Subscriber >> ignoreLocalPublication [
+	^ ignoreLocalPublication
+]
+
+{ #category : #accessing }
+ROS2_Subscriber >> ignoreLocalPublication: anObject [
+	ignoreLocalPublication := anObject
 ]
 
 { #category : #initialization }
@@ -66,6 +81,11 @@ ROS2_Subscriber >> registerSub [
 ]
 
 { #category : #accessing }
+ROS2_Subscriber >> subscriberStruct [
+	^ subscriberStruct
+]
+
+{ #category : #accessing }
 ROS2_Subscriber >> subscriberStruct: anObject [
 	^ subscriberStruct := anObject
 ]
@@ -87,5 +107,20 @@ ROS2_Subscriber >> typeSupportName [
 
 { #category : #accessing }
 ROS2_Subscriber >> typeSupportName: anObject [
-	typeSupportName := anObject
+	"
+	Any Type support
+	You can find all Type with ros2 msg show command
+	
+	Example of type:
+		- std_msgs/String
+		- geometry_msgs/Twist
+	"
+	typeSupportName := anObject.
+	PhaROS2TypeBrowser instance need: typeSupportName.
+	typeSupportStruct := PhaROS_Msgs typeSupport: typeSupportName.
+]
+
+{ #category : #accessing }
+ROS2_Subscriber >> typeSupportStruct [
+	^ typeSupportStruct
 ]

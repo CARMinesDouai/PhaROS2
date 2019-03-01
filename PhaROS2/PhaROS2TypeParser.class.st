@@ -92,11 +92,11 @@ PhaROS2TypeParser class >> parseROS2Line: aLine package: aPackage [
 		openBraket + 1 = closeBraket  ifTrue: [ 
 		" Is a typed array  "
 			isPrimitive ifTrue: [ 
-					^typeClass,$*, String space, typeName
+					^typeClass,'*', String space, typeName
 				 ]
 			ifFalse: [ 
 					vPhaROS2Class := PhaROS2TypeBrowser instance need: (PhaROS2TypeParser computeROS2Name: typeType package: aPackage).
-				^vPhaROS2Class name,$*,String space,typeName.
+				^vPhaROS2Class name,'*',String space,typeName.
 				 ]
 	 	] ifFalse: [ 
 			" Is a typed array with fixed size "

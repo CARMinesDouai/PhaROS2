@@ -94,6 +94,7 @@ PhaROS_Msgs class >> amentRecompile [
 	src/ament_tools/scripts/ament.py build --build-tests --symlink-install --only-packages pharosmsgs
 	"
 	"PipeableOSProcess waitForCommand: '/home/william/ros2_ws/src/ament_tools/scripts/ament.py build --symlink-install --only-packages pharosmsgs'."
+	Transcript crShow: 'Recompile Ament'.
 	shell := PipeableOSProcess bash.
 	shell exec: 'source /opt/ros/bouncy/setup.bash';exec: '/home/william/ros2_ws/src/ament_tools/scripts/ament.py build --symlink-install --only-packages pharosmsgs'.
 	Transcript crShow: shell upToEnd.
@@ -173,8 +174,8 @@ PhaROS_Msgs class >> signatureOf: aType [
 { #category : #usage }
 PhaROS_Msgs class >> typeSupport: aType [
 	| sign |
+	PhaROS2TypeBrowser instance need: aType copy.
 	sign := (PhaROS_Msgs signatureOf: aType copy) asSymbol.
-	Transcript crShow: sign.
 	"^(generatedTypeDict) ifNil: [ self error: 'Generated method dict is nil' ] ifNotNil: [ 
 		^((generatedTypeDict at: sign ifAbsent:[self error: 'method not generated'])value)
 		 ]"

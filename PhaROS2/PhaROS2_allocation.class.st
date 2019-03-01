@@ -5,6 +5,22 @@ Class {
 }
 
 { #category : #allocate }
+PhaROS2_allocation class >> encodefloat64: aFloat [
+	| ret |
+	ret := FFIFloat64 new.
+		
+	
+	^ret.
+]
+
+{ #category : #allocate }
+PhaROS2_allocation class >> encodefloat64: aFloat handle: aHandle [
+	| ret |
+	ret := FFIFloat64 new.
+	ret basicAt: aHandle put: aFloat.
+]
+
+{ #category : #allocate }
 PhaROS2_allocation class >> stringToPointer: aString [
 	|data|
 	data := FFIExternalArray externalNewType: 'char' size: (aString size + 1).

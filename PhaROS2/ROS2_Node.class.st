@@ -27,7 +27,7 @@ ROS2_Node >> createSubcriber: aSubscriber [
 	| vHandle |
 	aSubscriber parentNode: self.
 	subscribers add: aSubscriber.
-	vHandle := self ffiCreateSubscriber: aSubscriber topicName queueSize: aSubscriber queueSize messageType: aSubscriber typeSupportStruct callback: aSubscriber callback ignoreLocalPublication: aSubscriber ignoreLocalPublication.
+	vHandle := nodeStruct ffiCreateSubscriber: aSubscriber topicName queueSize: aSubscriber queueSize messageType: aSubscriber typeSupportStruct callback: aSubscriber callback ignoreLocalPublication: aSubscriber ignoreLocalPublication.
 	^vHandle
 ]
 

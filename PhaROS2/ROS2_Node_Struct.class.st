@@ -15,7 +15,7 @@ ROS2_Node_Struct >> ffiCreatePublisher: aName queueSize: anInt messageType: aMes
 	| array |
 	array := #(#ROS2_Publisher_Struct rclc_create_publisher(self, void aMessageType , char * aName, int anInt)).
 	(array at: 3) at: 3 put: aMessageType class name asSymbol.
-	^self ffiCall: #(#ROS2_Publisher_Struct rclc_create_publisher(self, Std_msgs_String_struct aMessageType , char * aName, int anInt))..
+	^self ffiCall: #(#ROS2_Publisher_Struct rclc_create_publisher(self, ROS2_TypeSupport_struct aMessageType , char * aName, int anInt))..
 ]
 
 { #category : #uffi }

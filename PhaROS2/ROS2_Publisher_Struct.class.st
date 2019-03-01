@@ -11,5 +11,6 @@ ROS2_Publisher_Struct >> ffiDestroy [
 
 { #category : #publish }
 ROS2_Publisher_Struct >> publish: aMsg [
+	aMsg inspect.
 	^self ffiCall: #(int rclc_publish(self, void * aMsg))
 ]
