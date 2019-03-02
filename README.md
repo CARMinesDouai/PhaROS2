@@ -1,5 +1,4 @@
 # PhaROS2
-The current file is not finish. All function was not written and fully tested by the time.
 
 ## Installation
 ### ROS2 Installation
@@ -276,39 +275,31 @@ Listener>>createSubscriber
 The callback function is used to treat the data send by `ROS2`.
 In my case I will juste print the data on the Transcript.
 
+In general, the data is a `PhaROS2_Type` subclasses according to the type the topic. For example, il you use `std_msgs/String` type, `data` will be `Std_msgs_String` object.
+
+
 ```smalltalk
 Listener>>myCallback: data
-	
+	| toPrint |
+	toPrint := data data.
+	Transcript crShow: toPrint.
 ```
 
 ## Thread
 As the same as the `publisher`, you have to handle a Thread.
 
-### Loop function
-To ensure the callback is working, the node need to be spinned. Without this, even if you publish a message in the topic, the callback will not be triggered.
+### Spin the node
+The fact of a node need to be spined, is laready handle by PhaROS2.
+To handle this, you juste have to call the `start` and `stop` function.
 
-```smalltalk
-Listener>>loopFunction
-	[ active ] whileTrue: [ 
-		node spinFunction.
-	(Delay forMilliseconds: 1000) wait.
-	 ]
-```
-
-### Start the thread
-With this function, the Thread will be start
+To handle this, you can just add these two functions on you Listener class.
 ```smalltalk
 Listener>>start
-	active := true.
-	myThread := [ self loopFunction. ] fork.
+	node startSpin.
 ```
-
-### Stop the thread
-With this function, the thread will be stopped. The node will not be delete in ROS side.
 ```smalltalk
 Listener>>stop
-	active := false.
-	(myThread) ifNotNil: [myThread terminate].
+	node stopSpin.
 ```
 
 ## Destroy the node
@@ -345,6 +336,6 @@ To check oll the topic, you have to check the topic list with `ros2 topic list`.
 
 Finaly to see the message send by the `publisher` you have to run `ros2 tpoic echo /myTopicName`. The message send by PhaROS2 will be print on your Terminal. To kill this terminal Listener, you simply have to use `ctrl-c`.
 
-To test the subcriber you can publish a message in your terminal. To do that juste run: `ros2 topic pub /myTopicName std_msgs/String {data: Hello PhaROS2}`. The message `Hello PhaROS2` will triggered the callback in Pharo.
+To test the subcriber you can publish a message in your terminal. To do that juste run: `ros2 topic pub /myTopicName std_msgs/String "data: 'Hello PhaROS2'"`. The message `Hello PhaROS2` will triggered the callback in Pharo.
 *Note: Please ensure the thread used to spin the node is active in Pharo side*
 
