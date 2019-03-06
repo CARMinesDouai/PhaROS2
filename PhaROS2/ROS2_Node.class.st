@@ -42,7 +42,7 @@ ROS2_Node >> destroyNode [
 	publishers do: [ :aPub | aPub destroyPublisher. ].
 	subscribers do: [ :aSub | aSub destroySub. ].
 	
-	spinThread ifNotNil: [ spinThread terminate ].
+	self stopSpin.
 	
 	nodeStruct ffiDestroyNode.
 ]

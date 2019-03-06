@@ -110,6 +110,46 @@ PhaROS_Msgs class >> ffiLibraryName [
 	^ '/home/william/ros2_ws/install/lib/libpharosmsgs.so'
 ]
 
+{ #category : #'as yet unclassified' }
+PhaROS_Msgs class >> get_builtin_interfaces_Time [
+^self ffiCall: #(Builtin_interfaces_Time_struct get_builtin_interfaces_Time())
+]
+
+{ #category : #'as yet unclassified' }
+PhaROS_Msgs class >> get_geometry_msgs_Twist [
+^self ffiCall: #(Geometry_msgs_Twist_struct get_geometry_msgs_Twist())
+]
+
+{ #category : #'as yet unclassified' }
+PhaROS_Msgs class >> get_geometry_msgs_Vector3 [
+^self ffiCall: #(Geometry_msgs_Vector3_struct get_geometry_msgs_Vector3())
+]
+
+{ #category : #'as yet unclassified' }
+PhaROS_Msgs class >> get_sensor_msgs_Joy [
+^self ffiCall: #(Sensor_msgs_Joy_struct get_sensor_msgs_Joy())
+]
+
+{ #category : #'as yet unclassified' }
+PhaROS_Msgs class >> get_std_msgs_Float32 [
+^self ffiCall: #(Std_msgs_Float32_struct get_std_msgs_Float32())
+]
+
+{ #category : #'as yet unclassified' }
+PhaROS_Msgs class >> get_std_msgs_Float64 [
+^self ffiCall: #(Std_msgs_Float64_struct get_std_msgs_Float64())
+]
+
+{ #category : #'as yet unclassified' }
+PhaROS_Msgs class >> get_std_msgs_Header [
+^self ffiCall: #(Std_msgs_Header_struct get_std_msgs_Header())
+]
+
+{ #category : #'as yet unclassified' }
+PhaROS_Msgs class >> get_std_msgs_String [
+^self ffiCall: #(Std_msgs_String_struct get_std_msgs_String())
+]
+
 { #category : #path }
 PhaROS_Msgs class >> pathToCMake [
 	^'/home/william/ros2_ws/src/pharosmsgs/pharosmsgs/addingdep.cmake'

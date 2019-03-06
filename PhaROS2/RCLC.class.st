@@ -20,6 +20,21 @@ RCLC class >> ffiLibraryName [
 ]
 
 { #category : #native }
+RCLC class >> getAxesAt: aPos rosMsg: msg [
+	^self ffiCall: #(float getAxes(void * msg, int aPos))
+]
+
+{ #category : #native }
+RCLC class >> getButtonsAt: aPos rosMsg: msg [
+	^self ffiCall: #(float getButton(void * msg, int aPos))
+]
+
+{ #category : #native }
+RCLC class >> getCmdVelLx: lx ly: ly lz: lz ax: ax ay: ay az: az [
+	^self ffiCall: #(void * setDataToTwist(float lx, float ly, float lz, float ax, float ay, float az))
+]
+
+{ #category : #native }
 RCLC class >> getMessageByteMultiArrayTypeSupport [ 
 	^self ffiCall: #(ROS2_TypeSupport_struct getByteArrayTypeSupport())
 ]

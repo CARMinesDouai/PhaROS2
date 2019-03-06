@@ -26,7 +26,7 @@ ROS2_Subscriber >> callback: aBlock [
 		The block excepted when they received a message
 		The callback is modified to cast to the correct Type
 	"
-	callback := (ROS2_Subscriber_callback on: [ :data | casting := (self typeSupportStruct class) fromHandle: data .aBlock cull: data] )
+	callback := (ROS2_Subscriber_callback on: [ :data | casting := (self typeSupportStruct class) fromHandle: data .aBlock cull: (data).] )
 ]
 
 { #category : #initialization }
