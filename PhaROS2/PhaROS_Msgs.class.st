@@ -110,6 +110,21 @@ PhaROS_Msgs class >> ffiLibraryName [
 	^ '/home/william/ros2_ws/install/lib/libpharosmsgs.so'
 ]
 
+{ #category : #native }
+PhaROS_Msgs class >> getAxesAt: aPos rosMsg: msg [
+	^self ffiCall: #(float getAxes(void * msg, int aPos))
+]
+
+{ #category : #native }
+PhaROS_Msgs class >> getButtonsAt: aPos rosMsg: msg [
+	^self ffiCall: #(float getButton(void * msg, int aPos))
+]
+
+{ #category : #native }
+PhaROS_Msgs class >> getCmdVelLx: lx ly: ly lz: lz ax: ax ay: ay az: az [
+	^self ffiCall: #(void * setDataToTwist(float lx, float ly, float lz, float ax, float ay, float az))
+]
+
 { #category : #'as yet unclassified' }
 PhaROS_Msgs class >> get_builtin_interfaces_Time [
 ^self ffiCall: #(Builtin_interfaces_Time_struct get_builtin_interfaces_Time())

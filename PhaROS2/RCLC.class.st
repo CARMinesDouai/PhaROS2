@@ -20,66 +20,6 @@ RCLC class >> ffiLibraryName [
 ]
 
 { #category : #native }
-RCLC class >> getAxesAt: aPos rosMsg: msg [
-	^self ffiCall: #(float getAxes(void * msg, int aPos))
-]
-
-{ #category : #native }
-RCLC class >> getButtonsAt: aPos rosMsg: msg [
-	^self ffiCall: #(float getButton(void * msg, int aPos))
-]
-
-{ #category : #native }
-RCLC class >> getCmdVelLx: lx ly: ly lz: lz ax: ax ay: ay az: az [
-	^self ffiCall: #(void * setDataToTwist(float lx, float ly, float lz, float ax, float ay, float az))
-]
-
-{ #category : #native }
-RCLC class >> getMessageByteMultiArrayTypeSupport [ 
-	^self ffiCall: #(ROS2_TypeSupport_struct getByteArrayTypeSupport())
-]
-
-{ #category : #native }
-RCLC class >> getMessageByteTypeSupport [ 
-	^self ffiCall: #(ROS2_TypeSupport_struct getByteTypeSupport())
-]
-
-{ #category : #native }
-RCLC class >> getMessageEmptyTypeSupport [ 
-	^self ffiCall: #(ROS2_TypeSupport_struct getEmptyTypeSupport())
-]
-
-{ #category : #native }
-RCLC class >> getMessageFloat32TypeSupport [ 
-	^self ffiCall: #(ROS2_TypeSupport_struct getFloat32TypeSupport())
-]
-
-{ #category : #native }
-RCLC class >> getMessageInt32TypeSupport [ 
-	^self ffiCall: #(ROS2_TypeSupport_struct getInt32TypeSupport())
-]
-
-{ #category : #native }
-RCLC class >> getMessageIntraProcessTypeSupport [ 
-	^self ffiCall: #(ROS2_TypeSupport_struct getIntraProcessTypeSupport())
-]
-
-{ #category : #native }
-RCLC class >> getMessageString: aString [
-	^self ffiCall: #(void * setDataToStringTypeSupport(char * aString))
-]
-
-{ #category : #native }
-RCLC class >> getMessageStringTypeSupport [ 
-	^self ffiCall: #(Std_msgs_String_struct getStringTypeSupport())
-]
-
-{ #category : #native }
-RCLC class >> getMessageTypeSupport [ 
-	^self ffiCall: #(ROS2_TypeSupport_struct getTypeSupport())
-]
-
-{ #category : #native }
 RCLC class >> initNoArgs [
 	|state externalArray argv|
 	state := self status.

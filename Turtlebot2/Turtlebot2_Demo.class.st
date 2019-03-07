@@ -26,9 +26,9 @@ Turtlebot2_Demo >> asInteger [
 
 { #category : #compute }
 Turtlebot2_Demo >> computeMove: data [
-	leftTrigger := RCLC getAxesAt: 5 rosMsg: data.
-	rightTrigger := RCLC getAxesAt: 2 rosMsg: data.
-	leftJoystick := RCLC getAxesAt: 0 rosMsg: data.
+	leftTrigger := PhaROS_Msgs getAxesAt: 5 rosMsg: data.
+	rightTrigger := PhaROS_Msgs getAxesAt: 2 rosMsg: data.
+	leftJoystick := PhaROS_Msgs getAxesAt: 0 rosMsg: data.
 	
 	leftTrigger := leftTrigger - 1.
 	rightTrigger := rightTrigger - 1.
