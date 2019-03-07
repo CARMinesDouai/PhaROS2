@@ -1,0 +1,630 @@
+ii  fonts-khmeros-core                                     5.0-7ubuntu1                                 all          KhmerOS Unicode fonts for the Khmer language of Cambodia
+ii  ros-bouncy-actionlib-msgs                              0.5.1-0bionic.20180823.020237                amd64        A package containing some message definitions used in the implementation or actions.
+ii  ros-bouncy-actionlib-msgs-dbgsym                       0.5.1-0bionic.20180823.020237                amd64        debug symbols for ros-bouncy-actionlib-msgs
+ii  ros-bouncy-amcl                                        3.1.0-0bionic.20180823.145201                amd64        amcl is a probabilistic localization system for a robot moving in 2D.
+ii  ros-bouncy-amcl-dbgsym                                 3.1.0-0bionic.20180823.145201                amd64        debug symbols for ros-bouncy-amcl
+ii  ros-bouncy-ament-clang-format                          0.5.2-0bionic.20180719.223425                amd64        The ability to check code against style conventions using clang-format and generate xUnit test result files.
+ii  ros-bouncy-ament-cmake                                 0.5.1-0bionic.20180719.225243                amd64        The entry point package for the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-auto                            0.5.1-0bionic.20180719.225409                amd64        The auto-magic functions for ease to use of the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-clang-format                    0.5.2-0bionic.20180719.224030                amd64        The CMake API for ament_clang_format to lint C / C++ code using clang format.
+ii  ros-bouncy-ament-cmake-copyright                       0.5.2-0bionic.20180719.223953                amd64        The CMake API for ament_copyright to check every source file contains copyright reference.
+ii  ros-bouncy-ament-cmake-core                            0.5.1-0bionic.20180719.222055                amd64        The core of the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-cppcheck                        0.5.2-0bionic.20180719.224031                amd64        The CMake API for ament_cppcheck to perform static code analysis on C/C++ code using Cppcheck.
+ii  ros-bouncy-ament-cmake-cpplint                         0.5.2-0bionic.20180719.224032                amd64        The CMake API for ament_cpplint to lint C / C++ code using cpplint.
+ii  ros-bouncy-ament-cmake-export-definitions              0.5.1-0bionic.20180719.225127                amd64        The ability to export definitions to downstream packages in the ament buildsystem.
+ii  ros-bouncy-ament-cmake-export-dependencies             0.5.1-0bionic.20180719.222816                amd64        The ability to export dependencies to downstream packages in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-export-include-directories      0.5.1-0bionic.20180719.222536                amd64        The ability to export include directories to downstream packages in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-export-interfaces               0.5.1-0bionic.20180719.225206                amd64        The ability to export interfaces to downstream packages in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-export-libraries                0.5.1-0bionic.20180719.225122                amd64        The ability to export libraries to downstream packages in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-export-link-flags               0.5.1-0bionic.20180719.222510                amd64        The ability to export link flags to downstream packages in the ament buildsystem.
+ii  ros-bouncy-ament-cmake-flake8                          0.5.2-0bionic.20180719.224032                amd64        The CMake API for ament_flake8 to check code syntax and style conventions with flake8.
+ii  ros-bouncy-ament-cmake-gmock                           0.5.1-0bionic.20180719.223225                amd64        The ability to add Google mock-based tests in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-gtest                           0.5.1-0bionic.20180719.223004                amd64        The ability to add gtest-based tests in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-include-directories             0.5.1-0bionic.20180719.225123                amd64        The functionality to order include directories according to a chain of prefixes in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-libraries                       0.5.1-0bionic.20180719.222535                amd64        The functionality to deduplicate libraries in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-lint-cmake                      0.5.2-0bionic.20180719.223654                amd64        The CMake API for ament_lint_cmake to lint CMake code using cmakelint.
+ii  ros-bouncy-ament-cmake-nose                            0.5.1-0bionic.20180719.222720                amd64        The ability to add nose-based tests in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-pclint                          0.5.2-0bionic.20180719.224032                amd64        The CMake API for ament_pclint to perform static code analysis on C/C++ code using PCLint.
+ii  ros-bouncy-ament-cmake-pep257                          0.5.2-0bionic.20180719.224030                amd64        The CMake API for ament_pep257 to check code against the style conventions in PEP 257.
+ii  ros-bouncy-ament-cmake-pep8                            0.5.2-0bionic.20180719.224032                amd64        The CMake API for ament_pep8 to check code against the style conventions in PEP 8.
+ii  ros-bouncy-ament-cmake-pyflakes                        0.5.2-0bionic.20180719.224032                amd64        The CMake API for ament_pyflakes to check code using pyflakes.
+ii  ros-bouncy-ament-cmake-pytest                          0.5.1-0bionic.20180719.222710                amd64        The ability to run Python tests using pytest in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-python                          0.5.1-0bionic.20180719.225123                amd64        The ability to use Python in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-ros                             0.5.0-0bionic.20180719.225407                amd64        The ROS specific CMake bits in the ament buildsystem.
+ii  ros-bouncy-ament-cmake-target-dependencies             0.5.1-0bionic.20180719.225212                amd64        The ability to add definitions, include directories and libraries of a package to a target in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-test                            0.5.1-0bionic.20180719.222503                amd64        The ability to add tests in the ament buildsystem in CMake.
+ii  ros-bouncy-ament-cmake-uncrustify                      0.5.2-0bionic.20180719.224309                amd64        The CMake API for ament_uncrustify to check code against styleconventions using uncrustify.
+ii  ros-bouncy-ament-copyright                             0.5.2-0bionic.20180719.223209                amd64        The ability to check source files for copyright and license information.
+ii  ros-bouncy-ament-cppcheck                              0.5.2-0bionic.20180719.222546                amd64        The ability to perform static code analysis on C/C++ code using Cppcheck and generate xUnit test result files.
+ii  ros-bouncy-ament-cpplint                               0.5.2-0bionic.20180719.223428                amd64        The ability to check code against the Google style conventions using cpplint and generate xUnit test result files.
+ii  ros-bouncy-ament-flake8                                0.5.2-0bionic.20180719.222637                amd64        The ability to check code for style and syntax conventions with flake8.
+ii  ros-bouncy-ament-index-cpp                             0.5.1-0bionic.20180719.225407                amd64        C++ API to access the ament resource index.
+ii  ros-bouncy-ament-index-cpp-dbgsym                      0.5.1-0bionic.20180719.225407                amd64        debug symbols for ros-bouncy-ament-index-cpp
+ii  ros-bouncy-ament-index-python                          0.5.1-0bionic.20180719.223216                amd64        Python API to access the ament resource index.
+ii  ros-bouncy-ament-lint-auto                             0.5.2-0bionic.20180719.222746                amd64        The auto-magic functions for ease to use of the ament linters in CMake.
+ii  ros-bouncy-ament-lint-cmake                            0.5.2-0bionic.20180719.223425                amd64        The ability to lint CMake code using cmakelint and generate xUnit test result files.
+ii  ros-bouncy-ament-lint-common                           0.5.2-0bionic.20180719.224359                amd64        The list of commonly used linters in the ament buildsytem in CMake.
+ii  ros-bouncy-ament-package                               0.5.2-0bionic.20180719.221910                amd64        The parser for the manifest files in the ament buildsystem.
+ii  ros-bouncy-ament-pclint                                0.5.2-0bionic.20180719.223428                amd64        The ability to perform static code analysis on C/C++ code using pclint and generate xUnit test result files.
+ii  ros-bouncy-ament-pep257                                0.5.2-0bionic.20180719.223010                amd64        The ability to check code against the style conventions in PEP 8 and generate xUnit test result files.
+ii  ros-bouncy-ament-pep8                                  0.5.2-0bionic.20180719.222754                amd64        The ability to check code against the style conventions in PEP 8 and generate xUnit test result files.
+ii  ros-bouncy-ament-pyflakes                              0.5.2-0bionic.20180719.223041                amd64        The ability to check code using pyflakes and generate xUnit test result files.
+ii  ros-bouncy-ament-tools                                 0.5.0-0bionic.20180719.223430                amd64        The command line tools for the ament buildsystem.
+ii  ros-bouncy-ament-uncrustify                            0.5.2-0bionic.20180719.223231                amd64        The ability to check code against style conventions using uncrustify and generate xUnit test result files.
+ii  ros-bouncy-angles                                      1.12.0-0bionic.20180719.225409               amd64        This package provides a set of simple math utilities to work with angles.
+ii  ros-bouncy-astra-camera                                2.1.1-0bionic.20180823.143719                amd64        Drivers for Orbbec Astra Devices.
+ii  ros-bouncy-astra-camera-dbgsym                         2.1.1-0bionic.20180823.143719                amd64        debug symbols for ros-bouncy-astra-camera
+ii  ros-bouncy-builtin-interfaces                          0.5.0-3bionic.20180823.013833                amd64        A package containing builtin message and service definitions.
+ii  ros-bouncy-builtin-interfaces-dbgsym                   0.5.0-3bionic.20180823.013833                amd64        debug symbols for ros-bouncy-builtin-interfaces
+ii  ros-bouncy-cartographer                                2.1.0-0bionic.20180719.222759                amd64        Cartographer is a system that provides real-time simultaneous localization and mapping (SLAM) in 2D and 3D across multiple platforms and sensor configurations.
+ii  ros-bouncy-cartographer-dbgsym                         2.1.0-0bionic.20180719.222759                amd64        debug symbols for ros-bouncy-cartographer
+ii  ros-bouncy-cartographer-ros                            2.1.1-1bionic.20180823.145304                amd64        Cartographer is a system that provides real-time simultaneous localization and mapping (SLAM) in 2D and 3D across multiple platforms and sensor configurations.
+ii  ros-bouncy-cartographer-ros-dbgsym                     2.1.1-1bionic.20180823.145304                amd64        debug symbols for ros-bouncy-cartographer-ros
+ii  ros-bouncy-cartographer-ros-msgs                       2.1.1-1bionic.20180823.021152                amd64        ROS messages for the cartographer_ros package.
+ii  ros-bouncy-cartographer-ros-msgs-dbgsym                2.1.1-1bionic.20180823.021152                amd64        debug symbols for ros-bouncy-cartographer-ros-msgs
+ii  ros-bouncy-class-loader                                1.1.0-0bionic.20180719.225410                amd64        The class_loader package is a ROS-independent package for loading plugins during runtime and the foundation of the higher level ROS &quot;pluginlib&quot; library.
+ii  ros-bouncy-class-loader-dbgsym                         1.1.0-0bionic.20180719.225410                amd64        debug symbols for ros-bouncy-class-loader
+ii  ros-bouncy-common-interfaces                           0.5.1-0bionic.20180823.060629                amd64        common_interfaces contains messages and services that are widely used by other ROS packages.
+ii  ros-bouncy-composition                                 0.5.1-1bionic.20180823.143055                amd64        Examples for composing multiple nodes in a single process.
+ii  ros-bouncy-composition-dbgsym                          0.5.1-1bionic.20180823.143055                amd64        debug symbols for ros-bouncy-composition
+ii  ros-bouncy-connext-cmake-module                        0.5.3-0bionic.20180719.225408                amd64        Provide CMake module to find RTI Connext.
+ii  ros-bouncy-console-bridge                              0.4.0-0bionic.20180719.222807                amd64        ROS-independent package for logging that seamlessly pipes into rosconsole/rosout for ROS-dependent packages.
+ii  ros-bouncy-console-bridge-dbgsym                       0.4.0-0bionic.20180719.222807                amd64        debug symbols for ros-bouncy-console-bridge
+ii  ros-bouncy-cv-bridge                                   2.0.5-0bionic.20180823.023112                amd64        This contains CvBridge, which converts between ROS2 Image messages and OpenCV images.
+ii  ros-bouncy-cv-bridge-dbgsym                            2.0.5-0bionic.20180823.023112                amd64        debug symbols for ros-bouncy-cv-bridge
+ii  ros-bouncy-demo-nodes-cpp                              0.5.1-1bionic.20180823.143014                amd64        C++ nodes which were previously in the ros2/examples repository but are now just used for demo purposes.
+ii  ros-bouncy-demo-nodes-cpp-dbgsym                       0.5.1-1bionic.20180823.143014                amd64        debug symbols for ros-bouncy-demo-nodes-cpp
+ii  ros-bouncy-demo-nodes-cpp-native                       0.5.1-1bionic.20180823.143111                amd64        C++ nodes which access the native handles of the rmw implemenation.
+ii  ros-bouncy-demo-nodes-cpp-native-dbgsym                0.5.1-1bionic.20180823.143111                amd64        debug symbols for ros-bouncy-demo-nodes-cpp-native
+ii  ros-bouncy-demo-nodes-py                               0.5.1-1bionic.20180823.142325                amd64        Python nodes which were previously in the ros2/examples repository but are now just used for demo purposes.
+ii  ros-bouncy-depthimage-to-laserscan                     2.1.0-0bionic.20180823.143152                amd64        depthimage_to_laserscan
+ii  ros-bouncy-depthimage-to-laserscan-dbgsym              2.1.0-0bionic.20180823.143152                amd64        debug symbols for ros-bouncy-depthimage-to-laserscan
+ii  ros-bouncy-depthimage-to-pointcloud2                   0.5.1-0bionic.20180823.143417                amd64        A simple node to convert a depth image and camera info into a PointCloud2.
+ii  ros-bouncy-depthimage-to-pointcloud2-dbgsym            0.5.1-0bionic.20180823.143417                amd64        debug symbols for ros-bouncy-depthimage-to-pointcloud2
+ii  ros-bouncy-desktop                                     0.5.1-0bionic.20180823.151615                amd64        A package which extends 'ros_base' and includes high level packages like vizualization tools and demos.
+ii  ros-bouncy-diagnostic-msgs                             0.5.1-0bionic.20180823.022115                amd64        A package containing some diagnostics related message and service definitions.
+ii  ros-bouncy-diagnostic-msgs-dbgsym                      0.5.1-0bionic.20180823.022115                amd64        debug symbols for ros-bouncy-diagnostic-msgs
+ii  ros-bouncy-dummy-map-server                            0.5.1-1bionic.20180823.143854                amd64        dummy map server node
+ii  ros-bouncy-dummy-map-server-dbgsym                     0.5.1-1bionic.20180823.143854                amd64        debug symbols for ros-bouncy-dummy-map-server
+ii  ros-bouncy-dummy-robot-bringup                         0.5.1-1bionic.20180823.145237                amd64        dummy robot bringup
+ii  ros-bouncy-dummy-sensors                               0.5.1-1bionic.20180823.143928                amd64        dummy sensor nodes
+ii  ros-bouncy-dummy-sensors-dbgsym                        0.5.1-1bionic.20180823.143928                amd64        debug symbols for ros-bouncy-dummy-sensors
+ii  ros-bouncy-ecl-build                                   1.0.0-0bionic.20180927.043807                amd64        Collection of cmake/make build tools primarily for ecl development itself, but also contains a few cmake modules useful outside of the ecl.
+ii  ros-bouncy-ecl-command-line                            1.0.0-0bionic.20180927.204759                amd64        Embeds the TCLAP library inside the ecl.
+ii  ros-bouncy-ecl-command-line-dbgsym                     1.0.0-0bionic.20180927.204759                amd64        debug symbols for ros-bouncy-ecl-command-line
+ii  ros-bouncy-ecl-concepts                                1.0.0-0bionic.20180927.205304                amd64        Introduces a compile time concept checking mechanism that can be used most commonly to check for required functionality when passing template arguments.
+ii  ros-bouncy-ecl-config                                  1.0.0-0bionic.20180927.153716                amd64        These tools inspect and describe your system with macros, types and functions.
+ii  ros-bouncy-ecl-config-dbgsym                           1.0.0-0bionic.20180927.153716                amd64        debug symbols for ros-bouncy-ecl-config
+ii  ros-bouncy-ecl-console                                 1.0.0-0bionic.20180927.154204                amd64        Color codes for ansii consoles.
+ii  ros-bouncy-ecl-containers                              1.0.0-0bionic.20180927.205955                amd64        The containers included here are intended to extend the stl containers.
+ii  ros-bouncy-ecl-containers-dbgsym                       1.0.0-0bionic.20180927.205955                amd64        debug symbols for ros-bouncy-ecl-containers
+ii  ros-bouncy-ecl-converters                              1.0.0-0bionic.20180927.205519                amd64        Some fast/convenient type converters, mostly for char strings or strings.
+ii  ros-bouncy-ecl-converters-dbgsym                       1.0.0-0bionic.20180927.205519                amd64        debug symbols for ros-bouncy-ecl-converters
+ii  ros-bouncy-ecl-converters-lite                         1.0.0-0bionic.20180927.154228                amd64        These are a very simple version of some of the functions in ecl_converters suitable for firmware development.
+ii  ros-bouncy-ecl-core-apps                               1.0.0-0bionic.20180927.210857                amd64        This includes a suite of programs demo'ing various aspects of the ecl_core.
+ii  ros-bouncy-ecl-core-apps-dbgsym                        1.0.0-0bionic.20180927.210857                amd64        debug symbols for ros-bouncy-ecl-core-apps
+ii  ros-bouncy-ecl-devices                                 1.0.0-0bionic.20180927.210244                amd64        Provides an extensible and standardised framework for input-output devices.
+ii  ros-bouncy-ecl-devices-dbgsym                          1.0.0-0bionic.20180927.210244                amd64        debug symbols for ros-bouncy-ecl-devices
+ii  ros-bouncy-ecl-eigen                                   1.0.0-0bionic.20180927.204806                amd64        This provides an Eigen implementation for ecl's linear algebra.
+ii  ros-bouncy-ecl-errors                                  1.0.0-0bionic.20180927.154209                amd64        This library provides lean and mean error mechanisms.
+ii  ros-bouncy-ecl-errors-dbgsym                           1.0.0-0bionic.20180927.154209                amd64        debug symbols for ros-bouncy-ecl-errors
+ii  ros-bouncy-ecl-exceptions                              1.0.0-0bionic.20180927.204817                amd64        Template based exceptions - these are simple and practical and avoid the proliferation of exception types.
+ii  ros-bouncy-ecl-exceptions-dbgsym                       1.0.0-0bionic.20180927.204817                amd64        debug symbols for ros-bouncy-ecl-exceptions
+ii  ros-bouncy-ecl-filesystem                              1.0.0-0bionic.20180927.204823                amd64        Cross platform filesystem utilities (until c++11 makes its way in).
+ii  ros-bouncy-ecl-filesystem-dbgsym                       1.0.0-0bionic.20180927.204823                amd64        debug symbols for ros-bouncy-ecl-filesystem
+ii  ros-bouncy-ecl-formatters                              1.0.0-0bionic.20180927.205737                amd64        The formatters here simply format various input types to a specified text format.
+ii  ros-bouncy-ecl-formatters-dbgsym                       1.0.0-0bionic.20180927.205737                amd64        debug symbols for ros-bouncy-ecl-formatters
+ii  ros-bouncy-ecl-geometry                                1.0.0-0bionic.20180927.210314                amd64        Any tools relating to mathematical geometry.
+ii  ros-bouncy-ecl-geometry-dbgsym                         1.0.0-0bionic.20180927.210314                amd64        debug symbols for ros-bouncy-ecl-geometry
+ii  ros-bouncy-ecl-io                                      1.0.0-0bionic.20180927.154252                amd64        Most implementations (windows, posix, ...) have slightly different api for low level input-output functions.
+ii  ros-bouncy-ecl-io-dbgsym                               1.0.0-0bionic.20180927.154252                amd64        debug symbols for ros-bouncy-ecl-io
+ii  ros-bouncy-ecl-ipc                                     1.0.0-0bionic.20180927.210056                amd64        Interprocess mechanisms vary greatly across platforms - sysv, posix, win32, there are more than a few.
+ii  ros-bouncy-ecl-ipc-dbgsym                              1.0.0-0bionic.20180927.210056                amd64        debug symbols for ros-bouncy-ecl-ipc
+ii  ros-bouncy-ecl-license                                 1.0.0-0bionic.20180927.043500                amd64        Maintains the ecl licenses and also provides an install target for deploying licenses with the ecl libraries.
+ii  ros-bouncy-ecl-linear-algebra                          1.0.0-0bionic.20180927.210000                amd64        Ecl frontend to a linear matrix package (currently eigen).
+ii  ros-bouncy-ecl-linear-algebra-dbgsym                   1.0.0-0bionic.20180927.210000                amd64        debug symbols for ros-bouncy-ecl-linear-algebra
+ii  ros-bouncy-ecl-manipulators                            1.0.0-0bionic.20180927.210704                amd64        Deploys various manipulation algorithms, currently just feedforward filters (interpolations).
+ii  ros-bouncy-ecl-manipulators-dbgsym                     1.0.0-0bionic.20180927.210704                amd64        debug symbols for ros-bouncy-ecl-manipulators
+ii  ros-bouncy-ecl-math                                    1.0.0-0bionic.20180927.205304                amd64        This package provides simple support to cmath, filling in holes or redefining in a c++ formulation where desirable.
+ii  ros-bouncy-ecl-mobile-robot                            1.0.0-0bionic.20180927.210803                amd64        Contains transforms (e.g.
+ii  ros-bouncy-ecl-mobile-robot-dbgsym                     1.0.0-0bionic.20180927.210803                amd64        debug symbols for ros-bouncy-ecl-mobile-robot
+ii  ros-bouncy-ecl-mpl                                     1.0.0-0bionic.20180927.204846                amd64        Metaprogramming tools move alot of runtime calculations to be shifted to compile time.
+ii  ros-bouncy-ecl-sigslots                                1.0.0-0bionic.20180927.210407                amd64        Provides a signal/slot mechanism (in the same vein as qt sigslots, boost::signals etc for intra-process communication.
+ii  ros-bouncy-ecl-sigslots-dbgsym                         1.0.0-0bionic.20180927.210407                amd64        debug symbols for ros-bouncy-ecl-sigslots
+ii  ros-bouncy-ecl-sigslots-lite                           1.0.0-0bionic.20180927.154252                amd64        This avoids use of dynamic storage (malloc/new) and thread safety (mutexes) to provide a very simple sigslots implementation that can be used for *very* embedded development.
+ii  ros-bouncy-ecl-sigslots-lite-dbgsym                    1.0.0-0bionic.20180927.154252                amd64        debug symbols for ros-bouncy-ecl-sigslots-lite
+ii  ros-bouncy-ecl-statistics                              1.0.0-0bionic.20180927.210516                amd64        Common statistical structures and algorithms for control systems.
+ii  ros-bouncy-ecl-statistics-dbgsym                       1.0.0-0bionic.20180927.210516                amd64        debug symbols for ros-bouncy-ecl-statistics
+ii  ros-bouncy-ecl-streams                                 1.0.0-0bionic.20180927.210639                amd64        These are lightweight text streaming classes that connect to standardised ecl type devices.
+ii  ros-bouncy-ecl-streams-dbgsym                          1.0.0-0bionic.20180927.210639                amd64        debug symbols for ros-bouncy-ecl-streams
+ii  ros-bouncy-ecl-threads                                 1.0.0-0bionic.20180927.205742                amd64        This package provides the c++ extensions for a variety of threaded programming tools.
+ii  ros-bouncy-ecl-threads-dbgsym                          1.0.0-0bionic.20180927.205742                amd64        debug symbols for ros-bouncy-ecl-threads
+ii  ros-bouncy-ecl-time                                    1.0.0-0bionic.20180927.204859                amd64        Timing utilities are very dependent on the system api provided for their use.
+ii  ros-bouncy-ecl-time-dbgsym                             1.0.0-0bionic.20180927.204859                amd64        debug symbols for ros-bouncy-ecl-time
+ii  ros-bouncy-ecl-time-lite                               1.0.0-0bionic.20180927.154252                amd64        Provides a portable set of time functions that are especially useful for porting other code or being wrapped by higher level c++ classes.
+ii  ros-bouncy-ecl-time-lite-dbgsym                        1.0.0-0bionic.20180927.154252                amd64        debug symbols for ros-bouncy-ecl-time-lite
+ii  ros-bouncy-ecl-type-traits                             1.0.0-0bionic.20180927.205122                amd64        Extends c++ type traits and implements a few more to boot.
+ii  ros-bouncy-ecl-type-traits-dbgsym                      1.0.0-0bionic.20180927.205122                amd64        debug symbols for ros-bouncy-ecl-type-traits
+ii  ros-bouncy-ecl-utilities                               1.0.0-0bionic.20180927.205519                amd64        Includes various supporting tools and utilities for c++ programming.
+ii  ros-bouncy-ecl-utilities-dbgsym                        1.0.0-0bionic.20180927.205519                amd64        debug symbols for ros-bouncy-ecl-utilities
+ii  ros-bouncy-example-interfaces                          0.5.0-1bionic.20180823.013836                amd64        Contains message and service definitions used by the examples.
+ii  ros-bouncy-example-interfaces-dbgsym                   0.5.0-1bionic.20180823.013836                amd64        debug symbols for ros-bouncy-example-interfaces
+ii  ros-bouncy-examples-rclcpp-minimal-client              0.5.1-0bionic.20180823.144121                amd64        Examples of minimal service clients
+ii  ros-bouncy-examples-rclcpp-minimal-client-dbgsym       0.5.1-0bionic.20180823.144121                amd64        debug symbols for ros-bouncy-examples-rclcpp-minimal-client
+ii  ros-bouncy-examples-rclcpp-minimal-composition         0.5.1-0bionic.20180823.144309                amd64        Minimalist examples of composing nodes in the same process
+ii  ros-bouncy-examples-rclcpp-minimal-composition-dbgsym  0.5.1-0bionic.20180823.144309                amd64        debug symbols for ros-bouncy-examples-rclcpp-minimal-composition
+ii  ros-bouncy-examples-rclcpp-minimal-publisher           0.5.1-0bionic.20180823.144309                amd64        Examples of minimal publisher nodes
+ii  ros-bouncy-examples-rclcpp-minimal-publisher-dbgsym    0.5.1-0bionic.20180823.144309                amd64        debug symbols for ros-bouncy-examples-rclcpp-minimal-publisher
+ii  ros-bouncy-examples-rclcpp-minimal-service             0.5.1-0bionic.20180823.144316                amd64        A minimal service server which adds two numbers
+ii  ros-bouncy-examples-rclcpp-minimal-service-dbgsym      0.5.1-0bionic.20180823.144316                amd64        debug symbols for ros-bouncy-examples-rclcpp-minimal-service
+ii  ros-bouncy-examples-rclcpp-minimal-subscriber          0.5.1-0bionic.20180823.144343                amd64        Examples of minimal subscribers
+ii  ros-bouncy-examples-rclcpp-minimal-subscriber-dbgsym   0.5.1-0bionic.20180823.144343                amd64        debug symbols for ros-bouncy-examples-rclcpp-minimal-subscriber
+ii  ros-bouncy-examples-rclcpp-minimal-timer               0.5.1-0bionic.20180823.144413                amd64        Examples of minimal nodes which have timers
+ii  ros-bouncy-examples-rclcpp-minimal-timer-dbgsym        0.5.1-0bionic.20180823.144413                amd64        debug symbols for ros-bouncy-examples-rclcpp-minimal-timer
+ii  ros-bouncy-examples-rclpy-executors                    0.5.1-0bionic.20180823.142325                amd64        Examples of creating and using exectors to run multiple nodes in the same process
+ii  ros-bouncy-examples-rclpy-minimal-client               0.5.1-0bionic.20180823.142325                amd64        Examples of minimal service clients using rclpy.
+ii  ros-bouncy-examples-rclpy-minimal-publisher            0.5.1-0bionic.20180823.142325                amd64        Examples of minimal publishers using rclpy.
+ii  ros-bouncy-examples-rclpy-minimal-service              0.5.1-0bionic.20180823.142324                amd64        Examples of minimal service servers using rclpy.
+ii  ros-bouncy-examples-rclpy-minimal-subscriber           0.5.1-0bionic.20180823.142325                amd64        Examples of minimal subscribers using rclpy.
+ii  ros-bouncy-fastcdr                                     1.0.7-0bionic.20180719.222809                amd64        CDR serialization implementation.
+ii  ros-bouncy-fastcdr-dbgsym                              1.0.7-0bionic.20180719.222809                amd64        debug symbols for ros-bouncy-fastcdr
+ii  ros-bouncy-fastrtps                                    1.6.0-5bionic.20180719.223049                amd64        Implementation of RTPS standard.
+ii  ros-bouncy-fastrtps-cmake-module                       0.5.1-0bionic.20180719.225408                amd64        Provide CMake module to find eProsima FastRTPS.
+ii  ros-bouncy-fastrtps-dbgsym                             1.6.0-5bionic.20180719.223049                amd64        debug symbols for ros-bouncy-fastrtps
+ii  ros-bouncy-geometry-msgs                               0.5.1-0bionic.20180823.020236                amd64        A package containing some geometry related message definitions.
+ii  ros-bouncy-geometry-msgs-dbgsym                        0.5.1-0bionic.20180823.020236                amd64        debug symbols for ros-bouncy-geometry-msgs
+ii  ros-bouncy-gmock-vendor                                1.8.0-0bionic.20180719.223136                amd64        The package provides GoogleMock.
+ii  ros-bouncy-gtest-vendor                                1.8.0-0bionic.20180719.222830                amd64        The package provides GoogleTest.
+ii  ros-bouncy-image-geometry                              2.0.5-0bionic.20180823.023111                amd64        `image_geometry` contains C++ and Python libraries for interpreting images geometrically.
+ii  ros-bouncy-image-geometry-dbgsym                       2.0.5-0bionic.20180823.023111                amd64        debug symbols for ros-bouncy-image-geometry
+ii  ros-bouncy-image-tools                                 0.5.1-1bionic.20180823.143431                amd64        Tools to capture and play back images to and from DDS subscriptions and publications.
+ii  ros-bouncy-image-tools-dbgsym                          0.5.1-1bionic.20180823.143431                amd64        debug symbols for ros-bouncy-image-tools
+ii  ros-bouncy-intra-process-demo                          0.5.1-1bionic.20180823.143502                amd64        Demonstrations of intra process communication.
+ii  ros-bouncy-intra-process-demo-dbgsym                   0.5.1-1bionic.20180823.143502                amd64        debug symbols for ros-bouncy-intra-process-demo
+ii  ros-bouncy-joy                                         2.1.0-0bionic.20180823.144420                amd64        ROS2 driver for a generic Linux joystick.
+ii  ros-bouncy-joy-dbgsym                                  2.1.0-0bionic.20180823.144420                amd64        debug symbols for ros-bouncy-joy
+ii  ros-bouncy-kdl-parser                                  2.1.0-0bionic.20180719.230136                amd64        The Kinematics and Dynamics Library (KDL) defines a tree structure to represent the kinematic and dynamic parameters of a robot mechanism.
+ii  ros-bouncy-kdl-parser-dbgsym                           2.1.0-0bionic.20180719.230136                amd64        debug symbols for ros-bouncy-kdl-parser
+ii  ros-bouncy-laser-geometry                              2.0.0-0bionic.20180823.144429                amd64        This package contains a class for converting from a 2D laser scan as defined by sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud or sensor_msgs/PointCloud2.
+ii  ros-bouncy-laser-geometry-dbgsym                       2.0.0-0bionic.20180823.144429                amd64        debug symbols for ros-bouncy-laser-geometry
+ii  ros-bouncy-launch                                      0.6.0-0bionic.20180823.011059                amd64        The ROS launch tool.
+ii  ros-bouncy-launch-ros                                  0.6.0-0bionic.20180823.142326                amd64        ROS specific extensions to the launch tool.
+ii  ros-bouncy-launch-testing                              0.6.0-0bionic.20180823.011509                amd64        Helper scripts for tests that use the ROS launch tool.
+ii  ros-bouncy-libcurl-vendor                              2.1.0-0bionic.20180719.225705                amd64        Wrapper around libcurl, it provides a fixed CMake module and an ExternalProject build of it.
+ii  ros-bouncy-libyaml-vendor                              1.0.0-0bionic.20180719.225708                amd64        Wrapper around libyaml, provides the last version (1.8.0 rc) that ships with a CMake module
+ii  ros-bouncy-libyaml-vendor-dbgsym                       1.0.0-0bionic.20180719.225708                amd64        debug symbols for ros-bouncy-libyaml-vendor
+ii  ros-bouncy-lifecycle                                   0.5.1-1bionic.20180823.145109                amd64        Package containing demos for lifecycle implementation
+ii  ros-bouncy-lifecycle-dbgsym                            0.5.1-1bionic.20180823.145109                amd64        debug symbols for ros-bouncy-lifecycle
+ii  ros-bouncy-lifecycle-msgs                              0.5.0-3bionic.20180823.060126                amd64        A package containing some lifecycle related message and service definitions.
+ii  ros-bouncy-lifecycle-msgs-dbgsym                       0.5.0-3bionic.20180823.060126                amd64        debug symbols for ros-bouncy-lifecycle-msgs
+ii  ros-bouncy-logging-demo                                0.5.1-1bionic.20180823.143608                amd64        Examples for using and configuring loggers.
+ii  ros-bouncy-logging-demo-dbgsym                         0.5.1-1bionic.20180823.143608                amd64        debug symbols for ros-bouncy-logging-demo
+ii  ros-bouncy-map-msgs                                    2.0.0-1bionic.20180823.060600                amd64        This package defines messages commonly used in mapping packages.
+ii  ros-bouncy-map-msgs-dbgsym                             2.0.0-1bionic.20180823.060600                amd64        debug symbols for ros-bouncy-map-msgs
+ii  ros-bouncy-map-server                                  3.1.0-0bionic.20180823.142940                amd64        map_server provides the map_server ROS Node, which offers map data as a ROS Service.
+ii  ros-bouncy-map-server-dbgsym                           3.1.0-0bionic.20180823.142940                amd64        debug symbols for ros-bouncy-map-server
+ii  ros-bouncy-nav-msgs                                    0.5.1-0bionic.20180823.060128                amd64        A package containing some navigation related message and service definitions.
+ii  ros-bouncy-nav-msgs-dbgsym                             0.5.1-0bionic.20180823.060128                amd64        debug symbols for ros-bouncy-nav-msgs
+ii  ros-bouncy-opensplice-cmake-module                     0.5.0-0bionic.20180719.225726                amd64        Provide CMake module to find PrismTech OpenSplice.
+ii  ros-bouncy-orocos-kdl                                  3.0.1-0bionic.20180719.222845                amd64        This package contains a recent version of the Kinematics and Dynamics Library (KDL), distributed by the Orocos Project.
+ii  ros-bouncy-orocos-kdl-dbgsym                           3.0.1-0bionic.20180719.222845                amd64        debug symbols for ros-bouncy-orocos-kdl
+ii  ros-bouncy-osrf-pycommon                               0.1.5-0bionic.20180719.222852                amd64        Commonly needed Python modules, used by Python software developed at OSRF.
+ii  ros-bouncy-osrf-testing-tools-cpp                      1.0.0-0bionic.20180719.222907                amd64        Testing tools for C++, and is used in various OSRF projects.
+ii  ros-bouncy-osrf-testing-tools-cpp-dbgsym               1.0.0-0bionic.20180719.222907                amd64        debug symbols for ros-bouncy-osrf-testing-tools-cpp
+ii  ros-bouncy-pcl-conversions                             2.0.0-0bionic.20180823.023100                amd64        Provides conversions from PCL data types and ROS message types
+ii  ros-bouncy-pendulum-control                            0.5.1-1bionic.20180823.145209                amd64        Demonstrates ROS 2's realtime capabilities with a simulated inverted pendulum.
+ii  ros-bouncy-pendulum-control-dbgsym                     0.5.1-1bionic.20180823.145209                amd64        debug symbols for ros-bouncy-pendulum-control
+ii  ros-bouncy-pendulum-msgs                               0.5.1-1bionic.20180823.014749                amd64        Custom messages for real-time pendulum control.
+ii  ros-bouncy-pendulum-msgs-dbgsym                        0.5.1-1bionic.20180823.014749                amd64        debug symbols for ros-bouncy-pendulum-msgs
+ii  ros-bouncy-pluginlib                                   2.1.1-0bionic.20180823.011819                amd64        The pluginlib package provides tools for writing and dynamically loading plugins using the ROS build infrastructure.
+ii  ros-bouncy-poco-vendor                                 1.1.1-0bionic.20180719.222911                amd64        CMake shim over the poco library.
+ii  ros-bouncy-python-cmake-module                         0.5.2-0bionic.20180719.225731                amd64        Provide CMake module with extra functionality for Python.
+ii  ros-bouncy-rcl                                         0.5.1-0bionic.20180823.141233                amd64        The ROS client library common implementation.
+ii  ros-bouncy-rcl-dbgsym                                  0.5.1-0bionic.20180823.141233                amd64        debug symbols for ros-bouncy-rcl
+ii  ros-bouncy-rcl-interfaces                              0.5.0-3bionic.20180823.140212                amd64        The ROS client library common interfaces.
+ii  ros-bouncy-rcl-interfaces-dbgsym                       0.5.0-3bionic.20180823.140212                amd64        debug symbols for ros-bouncy-rcl-interfaces
+ii  ros-bouncy-rcl-lifecycle                               0.5.1-0bionic.20180823.141621                amd64        Package containing a C-based lifecycle implementation
+ii  ros-bouncy-rcl-lifecycle-dbgsym                        0.5.1-0bionic.20180823.141621                amd64        debug symbols for ros-bouncy-rcl-lifecycle
+ii  ros-bouncy-rcl-yaml-param-parser                       0.5.1-0bionic.20180823.141823                amd64        Package containing various utility types and functions for C
+ii  ros-bouncy-rcl-yaml-param-parser-dbgsym                0.5.1-0bionic.20180823.141823                amd64        debug symbols for ros-bouncy-rcl-yaml-param-parser
+ii  ros-bouncy-rclcpp                                      0.5.1-0bionic.20180823.142109                amd64        The ROS client library in C++.
+ii  ros-bouncy-rclcpp-dbgsym                               0.5.1-0bionic.20180823.142109                amd64        debug symbols for ros-bouncy-rclcpp
+ii  ros-bouncy-rclcpp-lifecycle                            0.5.1-0bionic.20180823.142736                amd64        Package containing a prototype for lifecycle implementation
+ii  ros-bouncy-rclcpp-lifecycle-dbgsym                     0.5.1-0bionic.20180823.142736                amd64        debug symbols for ros-bouncy-rclcpp-lifecycle
+ii  ros-bouncy-rclpy                                       0.5.4-0bionic.20180823.142114                amd64        Package containing the Python client.
+ii  ros-bouncy-rclpy-dbgsym                                0.5.4-0bionic.20180823.142114                amd64        debug symbols for ros-bouncy-rclpy
+ii  ros-bouncy-rcutils                                     0.5.1-0bionic.20180823.011544                amd64        Package containing various utility types and functions for C
+ii  ros-bouncy-rcutils-dbgsym                              0.5.1-0bionic.20180823.011544                amd64        debug symbols for ros-bouncy-rcutils
+ii  ros-bouncy-resource-retriever                          2.1.0-0bionic.20180719.225906                amd64        This package retrieves data from url-format files such as http://, ftp://, package:// file://, etc., and loads the data into memory.
+ii  ros-bouncy-resource-retriever-dbgsym                   2.1.0-0bionic.20180719.225906                amd64        debug symbols for ros-bouncy-resource-retriever
+ii  ros-bouncy-rmw                                         0.5.0-0bionic.20180823.011820                amd64        Contains the ROS middleware API.
+ii  ros-bouncy-rmw-connext-cpp                             0.5.1-0bionic.20180823.012532                amd64        Implement the ROS middleware interface using RTI Connext static code generation in C++.
+ii  ros-bouncy-rmw-connext-cpp-dbgsym                      0.5.1-0bionic.20180823.012532                amd64        debug symbols for ros-bouncy-rmw-connext-cpp
+ii  ros-bouncy-rmw-connext-shared-cpp                      0.5.1-0bionic.20180823.012344                amd64        C++ types and functions shared by the ROS middleware interface to RTI Connext Static and RTI Connext Dynamic.
+ii  ros-bouncy-rmw-connext-shared-cpp-dbgsym               0.5.1-0bionic.20180823.012344                amd64        debug symbols for ros-bouncy-rmw-connext-shared-cpp
+ii  ros-bouncy-rmw-dbgsym                                  0.5.0-0bionic.20180823.011820                amd64        debug symbols for ros-bouncy-rmw
+ii  ros-bouncy-rmw-fastrtps-cpp                            0.5.1-0bionic.20180823.012349                amd64        Implement the ROS middleware interface using eProsima FastRTPS static code generation in C++.
+ii  ros-bouncy-rmw-fastrtps-cpp-dbgsym                     0.5.1-0bionic.20180823.012349                amd64        debug symbols for ros-bouncy-rmw-fastrtps-cpp
+ii  ros-bouncy-rmw-implementation                          0.5.1-0bionic.20180823.012842                amd64        The decision which ROS middleware implementation should be used for C++.
+ii  ros-bouncy-rmw-implementation-cmake                    0.5.0-0bionic.20180719.225739                amd64        CMake functions which can discover and enumerate available implementations.
+ii  ros-bouncy-rmw-implementation-dbgsym                   0.5.1-0bionic.20180823.012842                amd64        debug symbols for ros-bouncy-rmw-implementation
+ii  ros-bouncy-rmw-opensplice-cpp                          0.5.2-0bionic.20180823.012510                amd64        Implement the ROS middleware interface using PrismTech OpenSplice static code generation in C++.
+ii  ros-bouncy-rmw-opensplice-cpp-dbgsym                   0.5.2-0bionic.20180823.012510                amd64        debug symbols for ros-bouncy-rmw-opensplice-cpp
+ii  ros-bouncy-robot-state-publisher                       2.1.0-0bionic.20180823.144703                amd64        ROS2 version of the robot_state_publisher package
+ii  ros-bouncy-robot-state-publisher-dbgsym                2.1.0-0bionic.20180823.144703                amd64        debug symbols for ros-bouncy-robot-state-publisher
+ii  ros-bouncy-ros-base                                    0.5.1-0bionic.20180823.145254                amd64        A package which extends 'ros_core' and includes other basic functionalities like tf2 and urdf.
+ii  ros-bouncy-ros-core                                    0.5.1-0bionic.20180823.145134                amd64        A package to aggregate the packages required to use publish / subscribe, services, generate messages and other core ROS concepts.
+ii  ros-bouncy-ros-environment                             2.1.1-0bionic.20180719.222536                amd64        The package provides the environment variables `ROS_VERSION` and `ROS_DISTRO`.
+ii  ros-bouncy-ros-workspace                               0.5.1-0bionic.20180719.222440                amd64        Provides the prefix level environment files for ROS 2 packages.
+ii  ros-bouncy-ros1-bridge                                 0.5.1-0bionic.20180823.143601                amd64        A simple bridge between ROS 1 and ROS 2
+ii  ros-bouncy-ros2cli                                     0.5.4-0bionic.20180823.142539                amd64        Framework for ROS 2 command line tools.
+ii  ros-bouncy-ros2launch                                  0.6.0-0bionic.20180823.144727                amd64        The launch command for ROS 2 command line tools.
+ii  ros-bouncy-ros2lifecycle                               0.5.4-0bionic.20180823.143630                amd64        The lifecycle command for ROS 2 command line tools.
+ii  ros-bouncy-ros2msg                                     0.5.4-0bionic.20180823.142633                amd64        The msg command for ROS 2 command line tools.
+ii  ros-bouncy-ros2node                                    0.5.4-0bionic.20180823.142632                amd64        The node command for ROS 2 command line tools.
+ii  ros-bouncy-ros2param                                   0.5.4-0bionic.20180823.143026                amd64        The param command for ROS 2 command line tools.
+ii  ros-bouncy-ros2pkg                                     0.5.4-0bionic.20180823.142632                amd64        The pkg command for ROS 2 command line tools.
+ii  ros-bouncy-ros2run                                     0.5.4-0bionic.20180823.143053                amd64        The run command for ROS 2 command line tools.
+ii  ros-bouncy-ros2service                                 0.5.4-0bionic.20180823.143354                amd64        The service command for ROS 2 command line tools.
+ii  ros-bouncy-ros2srv                                     0.5.4-0bionic.20180823.142632                amd64        The srv command for ROS 2 command line tools.
+ii  ros-bouncy-ros2topic                                   0.5.4-0bionic.20180823.143053                amd64        The topic command for ROS 2 command line tools.
+ii  ros-bouncy-rosgraph-msgs                               0.5.0-3bionic.20180823.014536                amd64        Messages relating to the ROS Computation Graph.
+ii  ros-bouncy-rosgraph-msgs-dbgsym                        0.5.0-3bionic.20180823.014536                amd64        debug symbols for ros-bouncy-rosgraph-msgs
+ii  ros-bouncy-rosidl-cmake                                0.5.1-0bionic.20180719.225727                amd64        The CMake functionality to invoke code generation for ROS interface files.
+ii  ros-bouncy-rosidl-default-generators                   0.5.0-0bionic.20180823.013633                amd64        A configuration package defining the default ROS interface generators.
+ii  ros-bouncy-rosidl-default-runtime                      0.5.0-0bionic.20180823.013633                amd64        A configuration package defining the runtime for the ROS interfaces.
+ii  ros-bouncy-rosidl-generator-c                          0.5.1-0bionic.20180719.225946                amd64        Generate the ROS interfaces in C.
+ii  ros-bouncy-rosidl-generator-c-dbgsym                   0.5.1-0bionic.20180719.225946                amd64        debug symbols for ros-bouncy-rosidl-generator-c
+ii  ros-bouncy-rosidl-generator-cpp                        0.5.1-0bionic.20180719.230222                amd64        Generate the ROS interfaces in C++.
+ii  ros-bouncy-rosidl-generator-dds-idl                    0.5.0-0bionic.20180719.230015                amd64        Generate the DDS interfaces for ROS interfaces.
+ii  ros-bouncy-rosidl-generator-py                         0.5.2-0bionic.20180823.013410                amd64        Generate the ROS interfaces in Python.
+ii  ros-bouncy-rosidl-parser                               0.5.1-0bionic.20180719.225410                amd64        The parser for ROS interface files.
+ii  ros-bouncy-rosidl-typesupport-c                        0.5.0-2bionic.20180823.013331                amd64        Generate the type support for C messages.
+ii  ros-bouncy-rosidl-typesupport-c-dbgsym                 0.5.0-2bionic.20180823.013331                amd64        debug symbols for ros-bouncy-rosidl-typesupport-c
+ii  ros-bouncy-rosidl-typesupport-connext-c                0.5.3-0bionic.20180823.012448                amd64        Generate the C interfaces for RTI Connext.
+ii  ros-bouncy-rosidl-typesupport-connext-c-dbgsym         0.5.3-0bionic.20180823.012448                amd64        debug symbols for ros-bouncy-rosidl-typesupport-connext-c
+ii  ros-bouncy-rosidl-typesupport-connext-cpp              0.5.3-0bionic.20180823.012020                amd64        Generate the C++ interfaces for RTI Connext.
+ii  ros-bouncy-rosidl-typesupport-connext-cpp-dbgsym       0.5.3-0bionic.20180823.012020                amd64        debug symbols for ros-bouncy-rosidl-typesupport-connext-cpp
+ii  ros-bouncy-rosidl-typesupport-cpp                      0.5.0-2bionic.20180823.013410                amd64        Generate the type support for C++ messages.
+ii  ros-bouncy-rosidl-typesupport-cpp-dbgsym               0.5.0-2bionic.20180823.013410                amd64        debug symbols for ros-bouncy-rosidl-typesupport-cpp
+ii  ros-bouncy-rosidl-typesupport-interface                0.5.1-0bionic.20180719.225745                amd64        The interface for rosidl typesupport packages.
+ii  ros-bouncy-rosidl-typesupport-introspection-c          0.5.1-0bionic.20180719.230220                amd64        Generate the message type support for dynamic message construction in C.
+ii  ros-bouncy-rosidl-typesupport-introspection-c-dbgsym   0.5.1-0bionic.20180719.230220                amd64        debug symbols for ros-bouncy-rosidl-typesupport-introspection-c
+ii  ros-bouncy-rosidl-typesupport-introspection-cpp        0.5.1-0bionic.20180719.230507                amd64        Generate the message type support for dynamic message construction in C++.
+ii  ros-bouncy-rosidl-typesupport-introspection-cpp-dbgsym 0.5.1-0bionic.20180719.230507                amd64        debug symbols for ros-bouncy-rosidl-typesupport-introspection-cpp
+ii  ros-bouncy-rosidl-typesupport-opensplice-c             0.5.0-0bionic.20180823.012307                amd64        Generate the C interfaces for PrismTech OpenSplice.
+ii  ros-bouncy-rosidl-typesupport-opensplice-c-dbgsym      0.5.0-0bionic.20180823.012307                amd64        debug symbols for ros-bouncy-rosidl-typesupport-opensplice-c
+ii  ros-bouncy-rosidl-typesupport-opensplice-cpp           0.5.0-0bionic.20180823.012019                amd64        Generate the C++ interfaces for PrismTech OpenSplice.
+ii  ros-bouncy-rosidl-typesupport-opensplice-cpp-dbgsym    0.5.0-0bionic.20180823.012019                amd64        debug symbols for ros-bouncy-rosidl-typesupport-opensplice-cpp
+ii  ros-bouncy-rttest                                      0.5.0-0bionic.20180719.225752                amd64        Instrumentation library for real-time performance testing
+ii  ros-bouncy-rttest-dbgsym                               0.5.0-0bionic.20180719.225752                amd64        debug symbols for ros-bouncy-rttest
+ii  ros-bouncy-rviz-assimp-vendor                          4.0.2-0bionic.20180823.011102                amd64        Wrapper around assimp, providing nothing but a dependency on assimp, on some systems.
+ii  ros-bouncy-rviz-common                                 4.0.2-0bionic.20180823.145341                amd64        Common rviz API, used by rviz plugins and applications.
+ii  ros-bouncy-rviz-common-dbgsym                          4.0.2-0bionic.20180823.145341                amd64        debug symbols for ros-bouncy-rviz-common
+ii  ros-bouncy-rviz-default-plugins                        4.0.2-0bionic.20180823.150452                amd64        Several default plugins for rviz to cover the basic functionality.
+ii  ros-bouncy-rviz-default-plugins-dbgsym                 4.0.2-0bionic.20180823.150452                amd64        debug symbols for ros-bouncy-rviz-default-plugins
+ii  ros-bouncy-rviz-ogre-vendor                            4.0.2-0bionic.20180823.011107                amd64        Wrapper around ogre3d, it provides a fixed CMake module and an ExternalProject build of ogre.
+ii  ros-bouncy-rviz-ogre-vendor-dbgsym                     4.0.2-0bionic.20180823.011107                amd64        debug symbols for ros-bouncy-rviz-ogre-vendor
+ii  ros-bouncy-rviz-rendering                              4.0.2-0bionic.20180823.012543                amd64        Library which provides the 3D rendering functionality in rviz.
+ii  ros-bouncy-rviz-rendering-dbgsym                       4.0.2-0bionic.20180823.012543                amd64        debug symbols for ros-bouncy-rviz-rendering
+ii  ros-bouncy-rviz-rendering-tests                        4.0.2-0bionic.20180823.013026                amd64        Example plugin for RViz - documents and tests RViz plugin development
+ii  ros-bouncy-rviz-visual-testing-framework               4.0.2-0bionic.20180823.150056                amd64        3D testing framework for RViz.
+ii  ros-bouncy-rviz-yaml-cpp-vendor                        4.0.2-0bionic.20180823.011003                amd64        Wrapper around yaml-cpp, it provides a fixed CMake module and an ExternalProject build of it.
+ii  ros-bouncy-rviz-yaml-cpp-vendor-dbgsym                 4.0.2-0bionic.20180823.011003                amd64        debug symbols for ros-bouncy-rviz-yaml-cpp-vendor
+ii  ros-bouncy-rviz2                                       4.0.2-0bionic.20180823.151308                amd64        3D visualization tool for ROS.
+ii  ros-bouncy-rviz2-dbgsym                                4.0.2-0bionic.20180823.151308                amd64        debug symbols for ros-bouncy-rviz2
+ii  ros-bouncy-sensor-msgs                                 0.5.1-0bionic.20180823.022135                amd64        A package containing some sensor data related message and service definitions.
+ii  ros-bouncy-sensor-msgs-dbgsym                          0.5.1-0bionic.20180823.022135                amd64        debug symbols for ros-bouncy-sensor-msgs
+ii  ros-bouncy-shape-msgs                                  0.5.1-0bionic.20180823.021925                amd64        A package containing some message definitions which describe geometric shapes.
+ii  ros-bouncy-shape-msgs-dbgsym                           0.5.1-0bionic.20180823.021925                amd64        debug symbols for ros-bouncy-shape-msgs
+ii  ros-bouncy-sophus                                      1.0.2-0bionic.20180927.171606                amd64        C++ implementation of Lie Groups using Eigen.
+ii  ros-bouncy-sros2                                       0.5.0-0bionic.20180823.142632                amd64        Command line tools for managing SROS2 keys
+ii  ros-bouncy-std-msgs                                    0.5.1-0bionic.20180823.015434                amd64        A package containing some standard message definitions.
+ii  ros-bouncy-std-msgs-dbgsym                             0.5.1-0bionic.20180823.015434                amd64        debug symbols for ros-bouncy-std-msgs
+ii  ros-bouncy-std-srvs                                    0.5.1-0bionic.20180823.060126                amd64        A package containing some standard service definitions.
+ii  ros-bouncy-std-srvs-dbgsym                             0.5.1-0bionic.20180823.060126                amd64        debug symbols for ros-bouncy-std-srvs
+ii  ros-bouncy-stereo-msgs                                 0.5.1-0bionic.20180823.023355                amd64        A package containing some stereo camera related message definitions.
+ii  ros-bouncy-stereo-msgs-dbgsym                          0.5.1-0bionic.20180823.023355                amd64        debug symbols for ros-bouncy-stereo-msgs
+ii  ros-bouncy-teleop-twist-joy                            2.1.0-0bionic.20180823.144709                amd64        Generic joystick teleop for twist robots.
+ii  ros-bouncy-teleop-twist-joy-dbgsym                     2.1.0-0bionic.20180823.144709                amd64        debug symbols for ros-bouncy-teleop-twist-joy
+ii  ros-bouncy-teleop-twist-keyboard                       2.1.1-0bionic.20180823.142543                amd64        A robot-agnostic teleoperation node to convert keyboard commands to Twist messages.
+ii  ros-bouncy-test-msgs                                   0.5.0-3bionic.20180823.015139                amd64        A package containing message definitions and fixtures used exclusively for testing purposes.
+ii  ros-bouncy-test-msgs-dbgsym                            0.5.0-3bionic.20180823.015139                amd64        debug symbols for ros-bouncy-test-msgs
+ii  ros-bouncy-test-osrf-testing-tools-cpp                 1.0.0-0bionic.20180719.223138                amd64        Test package, which uses things exported by osrf_testing_tools_cpp.
+ii  ros-bouncy-tf2                                         0.9.1-1bionic.20180823.021158                amd64        tf2 is the second generation of the transform library, which lets the user keep track of multiple coordinate frames over time.
+ii  ros-bouncy-tf2-dbgsym                                  0.9.1-1bionic.20180823.021158                amd64        debug symbols for ros-bouncy-tf2
+ii  ros-bouncy-tf2-eigen                                   0.9.1-1bionic.20180823.144729                amd64        tf2_eigen
+ii  ros-bouncy-tf2-geometry-msgs                           0.9.1-1bionic.20180823.144800                amd64        tf2_geometry_msgs
+ii  ros-bouncy-tf2-msgs                                    0.9.1-1bionic.20180823.140223                amd64        tf2_msgs
+ii  ros-bouncy-tf2-msgs-dbgsym                             0.9.1-1bionic.20180823.140223                amd64        debug symbols for ros-bouncy-tf2-msgs
+ii  ros-bouncy-tf2-ros                                     0.9.1-1bionic.20180823.142633                amd64        This package contains the ROS bindings for the tf2 library, for both Python and C++.
+ii  ros-bouncy-tf2-ros-dbgsym                              0.9.1-1bionic.20180823.142633                amd64        debug symbols for ros-bouncy-tf2-ros
+ii  ros-bouncy-tinyxml-vendor                              0.5.0-0bionic.20180719.222940                amd64        CMake shim over the tinxml library.
+ii  ros-bouncy-tinyxml2-vendor                             0.4.0-0bionic.20180719.222937                amd64        Wrapper around tinyxml2, providing nothing but a dependency on tinyxml2, on some systems.
+ii  ros-bouncy-tlsf                                        0.5.0-0bionic.20180719.225820                amd64        TLSF allocator version 2.4.6
+ii  ros-bouncy-tlsf-cpp                                    0.5.0-0bionic.20180823.144722                amd64        C++ stdlib-compatible wrapper around tlsf allocator and ROS2 examples
+ii  ros-bouncy-tlsf-cpp-dbgsym                             0.5.0-0bionic.20180823.144722                amd64        debug symbols for ros-bouncy-tlsf-cpp
+ii  ros-bouncy-topic-monitor                               0.5.1-1bionic.20180823.143018                amd64        Package containing tools for monitoring ROS 2 topics.
+ii  ros-bouncy-trajectory-msgs                             0.5.1-0bionic.20180823.022009                amd64        A package containing some robot trajectory message definitions.
+ii  ros-bouncy-trajectory-msgs-dbgsym                      0.5.1-0bionic.20180823.022009                amd64        debug symbols for ros-bouncy-trajectory-msgs
+ii  ros-bouncy-turtlebot2-amcl                             0.5.1-0bionic.20180823.145538                amd64        Demo of turtlebot2 localization with amcl.
+ii  ros-bouncy-turtlebot2-cartographer                     0.5.1-0bionic.20180823.150132                amd64        Launch files for turtlebot2 cartographer demo
+ii  ros-bouncy-turtlebot2-demo                             0.5.1-0bionic.20180823.150302                amd64        Metapackage aggregating the turtlebot2 demo packages
+ii  ros-bouncy-turtlebot2-drivers                          0.5.1-0bionic.20180823.144716                amd64        Set of drivers to talk to the kobuki base.
+ii  ros-bouncy-turtlebot2-drivers-dbgsym                   0.5.1-0bionic.20180823.144716                amd64        debug symbols for ros-bouncy-turtlebot2-drivers
+ii  ros-bouncy-turtlebot2-follower                         0.5.1-0bionic.20180823.145156                amd64        A simple follower using centroid in depth images.
+ii  ros-bouncy-turtlebot2-follower-dbgsym                  0.5.1-0bionic.20180823.145156                amd64        debug symbols for ros-bouncy-turtlebot2-follower
+ii  ros-bouncy-turtlebot2-teleop                           0.5.1-0bionic.20180823.145155                amd64        Launch files for turtlebot2 teleop demo
+ii  ros-bouncy-uncrustify-vendor                           0.66.1-1bionic.20180719.222525               amd64        Package a newer version of uncrustify (0.61+, b6593c1, April 14th 2015).
+ii  ros-bouncy-uncrustify-vendor-dbgsym                    0.66.1-1bionic.20180719.222525               amd64        debug symbols for ros-bouncy-uncrustify-vendor
+ii  ros-bouncy-urdf                                        2.1.0-0bionic.20180719.225915                amd64        This package contains a C++ parser for the Unified Robot Description Format (URDF), which is an XML format for representing a robot model.
+ii  ros-bouncy-urdf-dbgsym                                 2.1.0-0bionic.20180719.225915                amd64        debug symbols for ros-bouncy-urdf
+ii  ros-bouncy-urdfdom                                     2.0.0-0bionic.20180719.223142                amd64        A library to access URDFs using the DOM model.
+ii  ros-bouncy-urdfdom-dbgsym                              2.0.0-0bionic.20180719.223142                amd64        debug symbols for ros-bouncy-urdfdom
+ii  ros-bouncy-urdfdom-headers                             1.0.0-1bionic.20180719.222946                amd64        C++ headers for URDF.
+ii  ros-bouncy-vision-opencv                               2.0.5-0bionic.20180823.023748                amd64        Packages for interfacing ROS2 with OpenCV, a library of programming functions for real time computer vision.
+ii  ros-bouncy-visualization-msgs                          0.5.1-0bionic.20180823.021926                amd64        A package containing some visualization and interaction related message definitions.
+ii  ros-bouncy-visualization-msgs-dbgsym                   0.5.1-0bionic.20180823.021926                amd64        debug symbols for ros-bouncy-visualization-msgs
+ii  ros-melodic-actionlib                                  1.11.13-0bionic.20181112.191129              amd64        The actionlib stack provides a standardized interface for interfacing with preemptable tasks.
+ii  ros-melodic-actionlib-msgs                             1.12.7-0bionic.20181109.223847               amd64        actionlib_msgs defines the common messages to interact with an action server and an action client.
+ii  ros-melodic-actionlib-tutorials                        0.1.11-0bionic.20181112.194337               amd64        The actionlib_tutorials package
+ii  ros-melodic-angles                                     1.9.11-0bionic.20180906.222224               amd64        This package provides a set of simple math utilities to work with angles.
+ii  ros-melodic-bond                                       1.8.3-0bionic.20181005.132550                amd64        A bond allows two processes, A and B, to know when the other has terminated, either cleanly or by crashing.
+ii  ros-melodic-bond-core                                  1.8.3-0bionic.20181112.181003                amd64        A bond allows two processes, A and B, to know when the other has terminated, either cleanly or by crashing.
+ii  ros-melodic-bondcpp                                    1.8.3-0bionic.20181112.174134                amd64        C++ implementation of bond, a mechanism for checking when another process has terminated.
+ii  ros-melodic-bondpy                                     1.8.3-0bionic.20181112.175408                amd64        Python implementation of bond, a mechanism for checking when another process has terminated.
+ii  ros-melodic-camera-calibration                         1.12.23-0bionic.20181112.210218              amd64        camera_calibration allows easy calibration of monocular or stereo cameras using a checkerboard calibration target.
+ii  ros-melodic-camera-calibration-parsers                 1.11.13-0bionic.20181112.200232              amd64        camera_calibration_parsers contains routines for reading and writing camera calibration parameters.
+ii  ros-melodic-camera-info-manager                        1.11.13-0bionic.20181112.201004              amd64        This package provides a C++ interface for camera calibration information.
+ii  ros-melodic-catkin                                     0.7.14-0bionic.20180606.171811               amd64        Low-level build system macros and infrastructure for ROS.
+ii  ros-melodic-class-loader                               0.4.1-0bionic.20180606.175726                amd64        The class_loader package is a ROS-independent package for loading plugins during runtime and the foundation of the higher level ROS &quot;pluginlib&quot; library.
+ii  ros-melodic-cmake-modules                              0.4.1-0bionic.20180606.173831                amd64        A common repository for CMake Modules which are not distributed with CMake but are commonly used by ROS packages.
+ii  ros-melodic-common-msgs                                1.12.7-0bionic.20181112.205822               amd64        common_msgs contains messages that are widely used by other ROS packages.
+ii  ros-melodic-common-tutorials                           0.1.11-0bionic.20181112.195434               amd64        Metapackage that contains common tutorials
+ii  ros-melodic-compressed-depth-image-transport           1.9.5-0bionic.20181112.205659                amd64        Compressed_depth_image_transport provides a plugin to image_transport for transparently sending depth images (raw, floating-point) using PNG compression.
+ii  ros-melodic-compressed-image-transport                 1.9.5-0bionic.20181112.205703                amd64        Compressed_image_transport provides a plugin to image_transport for transparently sending images encoded as JPEG or PNG.
+ii  ros-melodic-control-msgs                               1.5.0-0bionic.20190221.004221                amd64        control_msgs contains base messages and actions useful for controlling robots.
+ii  ros-melodic-control-toolbox                            1.17.0-0bionic.20190221.005405               amd64        The control toolbox contains modules that are useful across all controllers.
+ii  ros-melodic-controller-interface                       0.15.1-0bionic.20181112.185714               amd64        Interface base class for controllers
+ii  ros-melodic-controller-manager                         0.15.1-0bionic.20181112.190112               amd64        The controller manager.
+ii  ros-melodic-controller-manager-msgs                    0.15.1-0bionic.20181005.132614               amd64        Messages and services for the controller manager.
+ii  ros-melodic-cpp-common                                 0.6.11-0bionic.20180606.172032               amd64        cpp_common contains C++ code for doing things that are not necessarily ROS related, but are useful for multiple packages.
+ii  ros-melodic-cv-bridge                                  1.13.0-0bionic.20181112.200243               amd64        This contains CvBridge, which converts between ROS Image messages and OpenCV images.
+ii  ros-melodic-depth-image-proc                           1.12.23-0bionic.20181117.184409              amd64        Contains nodelets for processing depth images such as those produced by OpenNI camera.
+ii  ros-melodic-desktop                                    1.4.1-0bionic.20190221.005502                amd64        A metapackage to aggregate several packages.
+ii  ros-melodic-desktop-full                               1.4.1-0bionic.20190221.011333                amd64        A metapackage to aggregate several packages.
+ii  ros-melodic-diagnostic-aggregator                      1.9.3-0bionic.20181112.182647                amd64        diagnostic_aggregator
+ii  ros-melodic-diagnostic-analysis                        1.9.3-0bionic.20181112.190458                amd64        The diagnostic_analysis package can convert a log of diagnostics data into a series of CSV files.
+ii  ros-melodic-diagnostic-common-diagnostics              1.9.3-0bionic.20181117.190022                amd64        diagnostic_common_diagnostics
+ii  ros-melodic-diagnostic-msgs                            1.12.7-0bionic.20181109.223847               amd64        This package holds the diagnostic messages which provide the standardized interface for the diagnostic and runtime monitoring systems in ROS.
+ii  ros-melodic-diagnostic-updater                         1.9.3-0bionic.20181112.182944                amd64        diagnostic_updater contains tools for easily updating diagnostics.
+ii  ros-melodic-diagnostics                                1.9.3-0bionic.20181117.192940                amd64        diagnostics
+ii  ros-melodic-diff-drive-controller                      0.14.3-0bionic.20190215.152904               amd64        Controller for a differential drive mobile base.
+ii  ros-melodic-dynamic-reconfigure                        1.6.0-0bionic.20181112.202435                amd64        This unary stack contains the dynamic_reconfigure package which provides a means to change node parameters at any time without having to restart the node.
+ii  ros-melodic-ecl-build                                  0.61.7-0bionic.20180606.180649               amd64        Collection of cmake/make build tools primarily for ecl development itself, but also contains a few cmake modules useful outside of the ecl.
+ii  ros-melodic-ecl-command-line                           0.62.2-0bionic.20180917.210045               amd64        Embeds the TCLAP library inside the ecl.
+ii  ros-melodic-ecl-concepts                               0.62.2-0bionic.20180917.210644               amd64        Introduces a compile time concept checking mechanism that can be used most commonly to check for required functionality when passing template arguments.
+ii  ros-melodic-ecl-config                                 0.61.6-0bionic.20180606.182839               amd64        These tools inspect and describe your system with macros, types and functions.
+ii  ros-melodic-ecl-containers                             0.62.2-0bionic.20180917.211443               amd64        The containers included here are intended to extend the stl containers.
+ii  ros-melodic-ecl-converters                             0.62.2-0bionic.20180917.211049               amd64        Some fast/convenient type converters, mostly for char strings or strings.
+ii  ros-melodic-ecl-devices                                0.62.2-0bionic.20180917.211714               amd64        Provides an extensible and standardised framework for input-output devices.
+ii  ros-melodic-ecl-eigen                                  0.62.2-0bionic.20180917.210106               amd64        This provides an Eigen implementation for ecl's linear algebra.
+ii  ros-melodic-ecl-errors                                 0.61.6-0bionic.20180606.183615               amd64        This library provides lean and mean error mechanisms.
+ii  ros-melodic-ecl-exceptions                             0.62.2-0bionic.20180917.210108               amd64        Template based exceptions - these are simple and practical and avoid the proliferation of exception types.
+ii  ros-melodic-ecl-formatters                             0.62.2-0bionic.20180917.211241               amd64        The formatters here simply format various input types to a specified text format.
+ii  ros-melodic-ecl-geometry                               0.62.2-0bionic.20180917.211752               amd64        Any tools relating to mathematical geometry.
+ii  ros-melodic-ecl-license                                0.61.7-0bionic.20180606.175724               amd64        Maintains the ecl licenses and also provides an install target for deploying licenses with the ecl libraries.
+ii  ros-melodic-ecl-linear-algebra                         0.62.2-0bionic.20180917.211510               amd64        Ecl frontend to a linear matrix package (currently eigen).
+ii  ros-melodic-ecl-math                                   0.62.2-0bionic.20180917.210704               amd64        This package provides simple support to cmath, filling in holes or redefining in a c++ formulation where desirable.
+ii  ros-melodic-ecl-mobile-robot                           0.60.3-0bionic.20180917.212209               amd64        Contains transforms (e.g.
+ii  ros-melodic-ecl-mpl                                    0.62.2-0bionic.20180917.210108               amd64        Metaprogramming tools move alot of runtime calculations to be shifted to compile time.
+ii  ros-melodic-ecl-sigslots                               0.62.2-0bionic.20180917.211703               amd64        Provides a signal/slot mechanism (in the same vein as qt sigslots, boost::signals etc for intra-process communication.
+ii  ros-melodic-ecl-threads                                0.62.2-0bionic.20180917.211323               amd64        This package provides the c++ extensions for a variety of threaded programming tools.
+ii  ros-melodic-ecl-time                                   0.62.2-0bionic.20180917.210500               amd64        Timing utilities are very dependent on the system api provided for their use.
+ii  ros-melodic-ecl-time-lite                              0.61.6-0bionic.20180606.185655               amd64        Provides a portable set of time functions that are especially useful for porting other code or being wrapped by higher level c++ classes.
+ii  ros-melodic-ecl-type-traits                            0.62.2-0bionic.20180917.210416               amd64        Extends c++ type traits and implements a few more to boot.
+ii  ros-melodic-ecl-utilities                              0.62.2-0bionic.20180917.211052               amd64        Includes various supporting tools and utilities for c++ programming.
+ii  ros-melodic-eigen-conversions                          1.12.0-0bionic.20181110.011416               amd64        Conversion functions between: - Eigen and KDL - Eigen and geometry_msgs.
+ii  ros-melodic-executive-smach                            2.0.1-0bionic.20181112.202722                amd64        This metapackage depends on the SMACH library and ROS SMACH integration packages.
+ii  ros-melodic-filters                                    1.8.1-0bionic.20181112.182549                amd64        This library provides a standardized interface for processing data as a sequence of filters.
+ii  ros-melodic-forward-command-controller                 0.14.3-0bionic.20190215.153516               amd64        forward_command_controller
+ii  ros-melodic-gazebo-dev                                 2.8.4-0bionic.20180706.234303                amd64        Provides a cmake config for the default version of Gazebo for the ROS distribution.
+ii  ros-melodic-gazebo-msgs                                2.8.4-0bionic.20181112.202939                amd64        Message and service data structures for interacting with Gazebo from ROS.
+ii  ros-melodic-gazebo-plugins                             2.8.4-0bionic.20181117.185301                amd64        Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components.
+ii  ros-melodic-gazebo-ros                                 2.8.4-0bionic.20181117.190127                amd64        Provides ROS plugins that offer message and service publishers for interfacing with Gazebo through ROS.
+ii  ros-melodic-gazebo-ros-control                         2.8.4-0bionic.20190221.010412                amd64        gazebo_ros_control
+ii  ros-melodic-gazebo-ros-pkgs                            2.8.4-0bionic.20181117.193954                amd64        Interface for using ROS with the Gazebo simulator.
+ii  ros-melodic-gencpp                                     0.6.0-0bionic.20180606.180745                amd64        C++ ROS message and service generators.
+ii  ros-melodic-geneus                                     2.2.6-0bionic.20180606.180755                amd64        EusLisp ROS message and service generators.
+ii  ros-melodic-genlisp                                    0.4.16-0bionic.20180606.180800               amd64        Common-Lisp ROS message and service generators.
+ii  ros-melodic-genmsg                                     0.5.11-0bionic.20180606.175935               amd64        Standalone Python library for generating ROS message and service data structures for various languages.
+ii  ros-melodic-gennodejs                                  2.0.1-0bionic.20180606.180812                amd64        Javascript ROS message and service generators.
+ii  ros-melodic-genpy                                      0.6.7-0bionic.20180606.180827                amd64        Python ROS message and service generators.
+ii  ros-melodic-geometry                                   1.12.0-0bionic.20181117.191343               amd64        A metapackage for geometry library suite.
+ii  ros-melodic-geometry-msgs                              1.12.7-0bionic.20181109.223847               amd64        geometry_msgs provides messages for common geometric primitives such as points, vectors, and poses.
+ii  ros-melodic-geometry-tutorials                         0.2.2-0bionic.20181117.191440                amd64        Metapackage of geometry tutorials ROS.
+ii  ros-melodic-gl-dependency                              1.1.0-0bionic.20180606.175941                amd64        This encapsulates the GL dependency for a specific ROS distribution and its Qt version
+ii  ros-melodic-hardware-interface                         0.15.1-0bionic.20181112.185236               amd64        Hardware Interface base class.
+ii  ros-melodic-image-common                               1.11.13-0bionic.20181112.205658              amd64        Common code for working with images in ROS.
+ii  ros-melodic-image-geometry                             1.13.0-0bionic.20181112.205326               amd64        `image_geometry` contains C++ and Python libraries for interpreting images geometrically.
+ii  ros-melodic-image-pipeline                             1.12.23-0bionic.20181117.185637              amd64        image_pipeline fills the gap between getting raw images from a camera driver and higher-level vision processing.
+ii  ros-melodic-image-proc                                 1.12.23-0bionic.20181112.210207              amd64        Single image rectification and color processing.
+ii  ros-melodic-image-publisher                            1.12.23-0bionic.20181112.202946              amd64        Contains a node publish an image stream from single image file or avi motion file.
+ii  ros-melodic-image-rotate                               1.12.23-0bionic.20181117.185011              amd64        Contains a node that rotates an image stream in a way that minimizes the angle between a vector in some arbitrary frame and a vector in the camera frame.
+ii  ros-melodic-image-transport                            1.11.13-0bionic.20181112.200247              amd64        image_transport should always be used to subscribe to and publish images.
+ii  ros-melodic-image-transport-plugins                    1.9.5-0bionic.20181112.210634                amd64        A set of plugins for publishing and subscribing to sensor_msgs/Image topics in representations other than raw pixel data.
+ii  ros-melodic-image-view                                 1.12.23-0bionic.20181112.205805              amd64        A simple viewer for ROS image topics.
+ii  ros-melodic-interactive-marker-tutorials               0.10.3-0bionic.20181117.190705               amd64        The interactive_marker_tutorials package
+ii  ros-melodic-interactive-markers                        1.11.4-0bionic.20181117.190146               amd64        3D interactive marker communication library for RViz and similar tools.
+ii  ros-melodic-joint-limits-interface                     0.15.1-0bionic.20181112.185744               amd64        Interface for enforcing joint limits.
+ii  ros-melodic-joint-state-controller                     0.14.3-0bionic.20190215.154707               amd64        Controller to publish joint state
+ii  ros-melodic-joint-state-publisher                      1.12.13-0bionic.20181112.202316              amd64        This package contains a tool for setting and publishing joint state values for a given URDF.
+ii  ros-melodic-kdl-conversions                            1.12.0-0bionic.20181110.012042               amd64        Conversion functions between KDL and geometry_msgs types.
+ii  ros-melodic-kdl-parser                                 1.13.1-0bionic.20181112.183229               amd64        The Kinematics and Dynamics Library (KDL) defines a tree structure to represent the kinematic and dynamic parameters of a robot mechanism.
+ii  ros-melodic-kdl-parser-py                              1.13.1-0bionic.20181112.185951               amd64        The Kinematics and Dynamics Library (KDL) defines a tree structure to represent the kinematic and dynamic parameters of a robot mechanism.
+ii  ros-melodic-kobuki-driver                              0.7.8-0bionic.20180917.212439                amd64        C++ driver library for Kobuki: Pure C++ driver library for Kobuki.
+ii  ros-melodic-kobuki-ftdi                                0.7.8-0bionic.20180917.210421                amd64        Utilities for flashing and enabling Kobuki's USB connection.
+ii  ros-melodic-laser-assembler                            1.7.6-0bionic.20181127.152325                amd64        Provides nodes to assemble point clouds from either LaserScan or PointCloud messages
+ii  ros-melodic-laser-filters                              1.8.6-0bionic.20181117.191058                amd64        Assorted filters designed to operate on 2D planar laser scanners, which use the sensor_msgs/LaserScan type.
+ii  ros-melodic-laser-geometry                             1.6.4-0bionic.20181117.190201                amd64        This package contains a class for converting from a 2D laser scan as defined by sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud or sensor_msgs/PointCloud2.
+ii  ros-melodic-laser-pipeline                             1.6.3-0bionic.20181127.153419                amd64        Meta-package of libraries for processing laser data, including converting laser data into 3D representations.
+ii  ros-melodic-librviz-tutorial                           0.10.3-0bionic.20181117.195915               amd64        Tutorial showing how to compile your own C++ program with RViz displays and features.
+ii  ros-melodic-map-msgs                                   1.13.0-0bionic.20181112.202901               amd64        This package defines messages commonly used in mapping packages.
+ii  ros-melodic-media-export                               0.2.0-0bionic.20180606.175936                amd64        Placeholder package enabling generic export of media paths.
+ii  ros-melodic-message-filters                            1.14.3-0bionic.20181112.182550               amd64        A set of message filters which take in messages and may output those messages at a later time, based on the conditions that filter needs met.
+ii  ros-melodic-message-generation                         0.4.0-0bionic.20180606.181147                amd64        Package modeling the build-time dependencies for generating language bindings of messages.
+ii  ros-melodic-message-runtime                            0.4.12-0bionic.20180606.182347               amd64        Package modeling the run-time dependencies for language bindings of messages.
+ii  ros-melodic-mk                                         1.14.4-0bionic.20180606.183206               amd64        A collection of .mk include files for building ROS architectural elements.
+ii  ros-melodic-nav-msgs                                   1.12.7-0bionic.20181109.225243               amd64        nav_msgs defines the common messages used to interact with the navigation stack.
+ii  ros-melodic-nodelet                                    1.9.16-0bionic.20181112.175030               amd64        The nodelet package is designed to provide a way to run multiple algorithms in the same process with zero copy transport between algorithms.
+ii  ros-melodic-nodelet-core                               1.9.16-0bionic.20181112.204904               amd64        Nodelet Core Metapackage
+ii  ros-melodic-nodelet-topic-tools                        1.9.16-0bionic.20181112.203037               amd64        This package contains common nodelet tools such as a mux, demux and throttle.
+ii  ros-melodic-nodelet-tutorial-math                      0.1.11-0bionic.20181112.180653               amd64        Package for Nodelet tutorial.
+ii  ros-melodic-orocos-kdl                                 1.4.0-0bionic.20180606.180101                amd64        This package contains a recent version of the Kinematics and Dynamics Library (KDL), distributed by the Orocos Project.
+ii  ros-melodic-pcl-conversions                            1.6.2-0bionic.20181112.205905                amd64        Provides conversions from PCL data types and ROS message types
+ii  ros-melodic-pcl-msgs                                   0.2.0-0bionic.20181112.205358                amd64        Package containing PCL (Point Cloud Library)-related ROS messages.
+ii  ros-melodic-pcl-ros                                    1.6.2-0bionic.20181117.185438                amd64        PCL (Point Cloud Library) ROS interface stack.
+ii  ros-melodic-perception                                 1.4.1-0bionic.20181127.153507                amd64        A metapackage to aggregate several packages.
+ii  ros-melodic-perception-pcl                             1.6.2-0bionic.20181117.195013                amd64        PCL (Point Cloud Library) ROS interface stack.
+ii  ros-melodic-pluginlib                                  1.12.1-0bionic.20181112.172345               amd64        The pluginlib package provides tools for writing and dynamically loading plugins using the ROS build infrastructure.
+ii  ros-melodic-pluginlib-tutorials                        0.1.11-0bionic.20181112.174347               amd64        The pluginlib_tutorials package
+ii  ros-melodic-polled-camera                              1.11.13-0bionic.20181112.201134              amd64        polled_camera contains a service and C++ helper classes for implementing a polled camera driver node and requesting images from it.
+ii  ros-melodic-position-controllers                       0.14.3-0bionic.20190215.161011               amd64        position_controllers
+ii  ros-melodic-python-orocos-kdl                          1.4.0-0bionic.20180606.180900                amd64        This package contains the python bindings PyKDL for the Kinematics and Dynamics Library (KDL), distributed by the Orocos Project.
+ii  ros-melodic-python-qt-binding                          0.3.4-0bionic.20180803.174105                amd64        This stack provides Python bindings for Qt.
+ii  ros-melodic-qt-dotgraph                                0.3.11-0bionic.20180830.004828               amd64        qt_dotgraph provides helpers to work with dot graphs.
+ii  ros-melodic-qt-gui                                     0.3.11-0bionic.20180830.004952               amd64        qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.
+ii  ros-melodic-qt-gui-cpp                                 0.3.11-0bionic.20181112.174758               amd64        qt_gui_cpp provides the foundation for C++-bindings for qt_gui and creates bindings for every generator available.
+ii  ros-melodic-qt-gui-py-common                           0.3.11-0bionic.20180830.005003               amd64        qt_gui_py_common provides common functionality for GUI plugins written in Python.
+ii  ros-melodic-qwt-dependency                             1.1.0-0bionic.20180606.181005                amd64        This encapsulates the Qwt dependency for a specific ROS distribution and its Qt version
+ii  ros-melodic-realtime-tools                             1.13.1-0bionic.20190215.150638               amd64        Contains a set of tools that can be used from a hard realtime thread, without breaking the realtime behavior.
+ii  ros-melodic-resource-retriever                         1.12.4-0bionic.20181112.172411               amd64        This package retrieves data from url-format files such as http://, ftp://, package:// file://, etc., and loads the data into memory.
+ii  ros-melodic-robot                                      1.4.1-0bionic.20190221.005351                amd64        A metapackage which extends ros_base and includes ROS libaries for any robot hardware.
+ii  ros-melodic-robot-state-publisher                      1.13.6-0bionic.20181117.185252               amd64        This package allows you to publish the state of a robot to tf.
+ii  ros-melodic-ros                                        1.14.4-0bionic.20180906.222138               amd64        ROS packaging system
+ii  ros-melodic-ros-base                                   1.4.1-0bionic.20181112.205939                amd64        A metapackage which extends ros_core and includes other basic non-robot tools like actionlib, dynamic reconfigure, nodelets, and pluginlib.
+ii  ros-melodic-ros-comm                                   1.14.3-0bionic.20181112.202811               amd64        ROS communications-related packages, including core client libraries (roscpp, rospy) and graph introspection tools (rostopic, rosnode, rosservice, rosparam).
+ii  ros-melodic-ros-core                                   1.4.1-0bionic.20181112.205903                amd64        A metapackage to aggregate the packages required to use publish / subscribe, services, launch files, and other core ROS concepts.
+ii  ros-melodic-ros-environment                            1.2.1-0bionic.20180606.180930                amd64        The package provides the environment variables `ROS_VERSION`, `ROS_DISTRO`, `ROS_PACKAGE_PATH`, and `ROS_ETC_DIR`.
+ii  ros-melodic-ros-tutorials                              0.9.0-0bionic.20181112.190302                amd64        ros_tutorials contains packages that demonstrate various features of ROS, as well as support packages which help demonstrate those features.
+ii  ros-melodic-rosbag                                     1.14.3-0bionic.20181112.185825               amd64        This is a set of tools for recording from and playing back to ROS topics.
+ii  ros-melodic-rosbag-migration-rule                      1.0.0-0bionic.20180606.180949                amd64        This empty package allows to export rosbag migration rule files without depending on rosbag.
+ii  ros-melodic-rosbag-storage                             1.14.3-0bionic.20181112.185327               amd64        This is a set of tools for recording from and playing back ROS message without relying on the ROS client library.
+ii  ros-melodic-rosbash                                    1.14.4-0bionic.20180606.181008               amd64        Assorted shell commands for using ros with bash.
+ii  ros-melodic-rosboost-cfg                               1.14.4-0bionic.20180606.181028               amd64        Contains scripts used by the rosboost-cfg tool for determining cflags/lflags/etc.
+ii  ros-melodic-rosbuild                                   1.14.4-0bionic.20180606.182837               amd64        rosbuild contains scripts for managing the CMake-based build system for ROS.
+ii  ros-melodic-rosclean                                   1.14.4-0bionic.20180606.181032               amd64        rosclean: cleanup filesystem resources (e.g.
+ii  ros-melodic-rosconsole                                 1.13.9-0bionic.20181112.171419               amd64        ROS console output library.
+ii  ros-melodic-rosconsole-bridge                          0.5.2-0bionic.20181112.172001                amd64        rosconsole_bridge is a package used in conjunction with console_bridge and rosconsole for connecting console_bridge-based logging to rosconsole-based logging.
+ii  ros-melodic-roscpp                                     1.14.3-0bionic.20181112.172149               amd64        roscpp is a C++ implementation of ROS.
+ii  ros-melodic-roscpp-core                                0.6.11-0bionic.20180606.173011               amd64        Underlying data libraries for roscpp messages.
+ii  ros-melodic-roscpp-serialization                       0.6.11-0bionic.20180606.172746               amd64        roscpp_serialization contains the code for serialization as described in MessagesSerializationAndAdaptingTypes.
+ii  ros-melodic-roscpp-traits                              0.6.11-0bionic.20180606.172543               amd64        roscpp_traits contains the message traits code as described in MessagesTraits.
+ii  ros-melodic-roscpp-tutorials                           0.9.0-0bionic.20181112.172932                amd64        This package attempts to show the features of ROS step-by-step, including using messages, servers, parameters, etc.
+ii  ros-melodic-roscreate                                  1.14.4-0bionic.20180606.181043               amd64        roscreate contains a tool that assists in the creation of ROS filesystem resources.
+ii  ros-melodic-rosgraph                                   1.14.3-0bionic.20180806.185059               amd64        rosgraph contains the rosgraph command-line tool, which prints information about the ROS Computation Graph.
+ii  ros-melodic-rosgraph-msgs                              1.11.2-0bionic.20180606.191800               amd64        Messages relating to the ROS Computation Graph.
+ii  ros-melodic-roslang                                    1.14.4-0bionic.20180606.180834               amd64        roslang is a common package that all ROS client libraries depend on.
+ii  ros-melodic-roslaunch                                  1.14.3-0bionic.20181112.181542               amd64        roslaunch is a tool for easily launching multiple ROS nodes locally and remotely via SSH, as well as setting parameters on the Parameter Server.
+ii  ros-melodic-roslib                                     1.14.4-0bionic.20180906.221638               amd64        Base dependencies and support libraries for ROS.
+ii  ros-melodic-roslint                                    0.11.2-0bionic.20180606.181059               amd64        CMake lint commands for ROS packages.
+ii  ros-melodic-roslisp                                    1.9.22-0bionic.20181015.225651               amd64        Lisp client library for ROS, the Robot Operating System.
+ii  ros-melodic-roslz4                                     1.14.3-0bionic.20180906.222251               amd64        A Python and C++ implementation of the LZ4 streaming format.
+ii  ros-melodic-rosmake                                    1.14.4-0bionic.20180606.182734               amd64        rosmake is a ros dependency aware build tool which can be used to build all dependencies in the correct order.
+ii  ros-melodic-rosmaster                                  1.14.3-0bionic.20180806.185301               amd64        ROS Master implementation.
+ii  ros-melodic-rosmsg                                     1.14.3-0bionic.20181112.195831               amd64        rosmsg contains two command-line tools: rosmsg and rossrv.
+ii  ros-melodic-rosnode                                    1.14.3-0bionic.20181112.190825               amd64        rosnode is a command-line tool for displaying debug information about ROS Nodes, including publications, subscriptions and connections.
+ii  ros-melodic-rosout                                     1.14.3-0bionic.20181112.174738               amd64        System-wide logging mechanism for messages sent to the /rosout topic.
+ii  ros-melodic-rospack                                    2.5.2-0bionic.20180906.220829                amd64        ROS Package Tool
+ii  ros-melodic-rosparam                                   1.14.3-0bionic.20180806.185423               amd64        rosparam contains the rosparam command-line tool for getting and setting ROS Parameters on the Parameter Server using YAML-encoded files.
+ii  ros-melodic-rospy                                      1.14.3-0bionic.20181112.174741               amd64        rospy is a pure Python client library for ROS.
+ii  ros-melodic-rospy-tutorials                            0.9.0-0bionic.20181112.185842                amd64        This package attempts to show the features of ROS python API step-by-step, including using messages, servers, parameters, etc.
+ii  ros-melodic-rosservice                                 1.14.3-0bionic.20181112.202329               amd64        rosservice contains the rosservice command-line tool for listing and querying ROS Services.
+ii  ros-melodic-rostest                                    1.14.3-0bionic.20181112.182207               amd64        Integration test suite based on roslaunch that is compatible with xUnit frameworks.
+ii  ros-melodic-rostime                                    0.6.11-0bionic.20180606.172255               amd64        Time and Duration implementations for C++ libraries, including roscpp.
+ii  ros-melodic-rostopic                                   1.14.3-0bionic.20181112.190405               amd64        rostopic contains the rostopic command-line tool for displaying debug information about ROS Topics, including publishers, subscribers, publishing rate, and ROS Messages.
+ii  ros-melodic-rosunit                                    1.14.4-0bionic.20180906.222048               amd64        Unit-testing package for ROS.
+ii  ros-melodic-roswtf                                     1.14.3-0bionic.20181112.202445               amd64        roswtf is a tool for diagnosing issues with a running ROS system.
+ii  ros-melodic-rqt-action                                 0.4.9-0bionic.20181112.202748                amd64        rqt_action provides a feature to introspect all available ROS action (from actionlib) types.
+ii  ros-melodic-rqt-bag                                    0.4.12-0bionic.20181112.191223               amd64        rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.
+ii  ros-melodic-rqt-bag-plugins                            0.4.12-0bionic.20181112.202300               amd64        rqt_bag provides a GUI plugin for displaying and replaying ROS bag files.
+ii  ros-melodic-rqt-common-plugins                         0.4.8-0bionic.20181112.205100                amd64        rqt_common_plugins metapackage provides ROS backend graphical tools suite that can be used on/off of robot runtime.
+ii  ros-melodic-rqt-console                                0.4.8-0bionic.20181112.202512                amd64        rqt_console provides a GUI plugin for displaying and filtering ROS messages.
+ii  ros-melodic-rqt-dep                                    0.4.9-0bionic.20181112.202809                amd64        rqt_dep provides a GUI plugin for visualizing the ROS dependency graph.
+ii  ros-melodic-rqt-graph                                  0.4.10-0bionic.20181112.202430               amd64        rqt_graph provides a GUI plugin for visualizing the ROS computation graph.
+ii  ros-melodic-rqt-gui                                    0.5.0-0bionic.20180830.032616                amd64        rqt_gui provides the main to start an instance of the ROS integrated graphical user interface provided by qt_gui.
+ii  ros-melodic-rqt-gui-cpp                                0.5.0-0bionic.20181112.180822                amd64        rqt_gui_cpp enables GUI plugins to use the C++ client library for ROS.
+ii  ros-melodic-rqt-gui-py                                 0.5.0-0bionic.20181112.181151                amd64        rqt_gui_py enables GUI plugins to use the Python client library for ROS.
+ii  ros-melodic-rqt-image-view                             0.4.13-0bionic.20181112.202354               amd64        rqt_image_view provides a GUI plugin for displaying images using image_transport.
+ii  ros-melodic-rqt-launch                                 0.4.8-0bionic.20181112.202615                amd64        This rqt plugin ROS package provides easy view of .launch files.
+ii  ros-melodic-rqt-logger-level                           0.4.8-0bionic.20181112.202435                amd64        rqt_logger_level provides a GUI plugin for configuring the logger level of ROS nodes.
+ii  ros-melodic-rqt-moveit                                 0.5.7-0bionic.20181112.202245                amd64        An rqt-based tool that assists monitoring tasks for MoveIt! motion planner developers and users.
+ii  ros-melodic-rqt-msg                                    0.4.8-0bionic.20181112.202611                amd64        A Python GUI plugin for introspecting available ROS message types.
+ii  ros-melodic-rqt-nav-view                               0.5.7-0bionic.20181117.185930                amd64        rqt_nav_view provides a gui for viewing navigation maps and paths.
+ii  ros-melodic-rqt-plot                                   0.4.8-0bionic.20181112.194807                amd64        rqt_plot provides a GUI plugin visualizing numeric values in a 2D plot using different plotting backends.
+ii  ros-melodic-rqt-pose-view                              0.5.8-0bionic.20181117.190235                amd64        rqt_pose_view provides a GUI plugin for visualizing 3D poses.
+ii  ros-melodic-rqt-publisher                              0.4.8-0bionic.20181112.202403                amd64        rqt_publisher provides a GUI plugin for publishing arbitrary messages with fixed or computed field values.
+ii  ros-melodic-rqt-py-common                              0.5.0-0bionic.20181112.194603                amd64        rqt_py_common provides common functionality for rqt plugins written in Python.
+ii  ros-melodic-rqt-py-console                             0.4.8-0bionic.20181112.182015                amd64        rqt_py_console is a Python GUI plugin providing an interactive Python console.
+ii  ros-melodic-rqt-reconfigure                            0.4.10-0bionic.20181112.204420               amd64        This rqt plugin succeeds former dynamic_reconfigure's GUI (reconfigure_gui), and provides the way to view and edit the parameters that are accessible via dynamic_reconfigure.
+ii  ros-melodic-rqt-robot-dashboard                        0.5.7-0bionic.20181117.192834                amd64        rqt_robot_dashboard provides an infrastructure for building robot dashboard plugins in rqt.
+ii  ros-melodic-rqt-robot-monitor                          0.5.8-0bionic.20181112.194804                amd64        rqt_robot_monitor displays diagnostics_agg topics messages that are published by diagnostic_aggregator.
+ii  ros-melodic-rqt-robot-plugins                          0.5.7-0bionic.20190204.220212                amd64        Metapackage of rqt plugins that are particularly used with robots during its operation.
+ii  ros-melodic-rqt-robot-steering                         0.5.9-0bionic.20181112.190818                amd64        rqt_robot_steering provides a GUI plugin for steering a robot using Twist messages.
+ii  ros-melodic-rqt-runtime-monitor                        0.5.7-0bionic.20181112.182009                amd64        rqt_runtime_monitor provides a GUI plugin viewing DiagnosticsArray messages.
+ii  ros-melodic-rqt-rviz                                   0.6.0-0bionic.20181117.200234                amd64        rqt_rviz provides a GUI plugin embedding RViz.
+ii  ros-melodic-rqt-service-caller                         0.4.8-0bionic.20181112.202444                amd64        rqt_service_caller provides a GUI plugin for calling arbitrary services.
+ii  ros-melodic-rqt-shell                                  0.4.9-0bionic.20181112.182425                amd64        rqt_shell is a Python GUI plugin providing an interactive shell.
+ii  ros-melodic-rqt-srv                                    0.4.8-0bionic.20181112.202756                amd64        A Python GUI plugin for introspecting available ROS message types.
+ii  ros-melodic-rqt-tf-tree                                0.6.0-0bionic.20190204.215333                amd64        rqt_tf_tree provides a GUI plugin for visualizing the ROS TF frame tree.
+ii  ros-melodic-rqt-top                                    0.4.8-0bionic.20181112.182151                amd64        RQT plugin for monitoring ROS processes.
+ii  ros-melodic-rqt-topic                                  0.4.10-0bionic.20181112.190821               amd64        rqt_topic provides a GUI plugin for displaying debug information about ROS topics including publishers, subscribers, publishing rate, and ROS Messages.
+ii  ros-melodic-rqt-web                                    0.4.8-0bionic.20181112.182203                amd64        rqt_web is a simple web content viewer for rqt.
+ii  ros-melodic-rviz                                       1.13.1-0bionic.20181117.191026               amd64        3D visualization tool for ROS.
+ii  ros-melodic-rviz-plugin-tutorials                      0.10.3-0bionic.20181117.200249               amd64        Tutorials showing how to write plugins for RViz.
+ii  ros-melodic-rviz-python-tutorial                       0.10.3-0bionic.20181117.200305               amd64        Tutorials showing how to call into rviz internals from python scripts.
+ii  ros-melodic-self-test                                  1.9.3-0bionic.20181112.184953                amd64        self_test
+ii  ros-melodic-sensor-msgs                                1.12.7-0bionic.20181112.195813               amd64        This package defines messages for commonly used sensors, including cameras and scanning laser rangefinders.
+ii  ros-melodic-shape-msgs                                 1.12.7-0bionic.20181109.225211               amd64        This package contains messages for defining shapes, such as simple solid object primitives (cube, sphere, etc), planes, and meshes.
+ii  ros-melodic-simulators                                 1.4.1-0bionic.20190221.005441                amd64        A metapackage to aggregate several packages.
+ii  ros-melodic-smach                                      2.0.1-0bionic.20180606.181139                amd64        SMACH is a task-level architecture for rapidly creating complex robot behavior.
+ii  ros-melodic-smach-msgs                                 2.0.1-0bionic.20180606.184610                amd64        this package contains a set of messages that are used by the introspection interfaces for smach.
+ii  ros-melodic-smach-ros                                  2.0.1-0bionic.20181112.194613                amd64        The smach_ros package contains extensions for the SMACH library to integrate it tightly with ROS.
+ii  ros-melodic-smclib                                     1.8.3-0bionic.20181005.140134                amd64        The State Machine Compiler (SMC) from http://smc.sourceforge.net/ converts a language-independent description of a state machine into the source code to support that state machine.
+ii  ros-melodic-sophus                                     1.0.1-1bionic.20180911.234713                amd64        C++ implementation of Lie Groups using Eigen.
+ii  ros-melodic-stage                                      4.3.0-0bionic.20180606.191504                amd64        Mobile robot simulator http://rtv.github.com/Stage
+ii  ros-melodic-stage-ros                                  1.8.0-0bionic.20181117.190442                amd64        This package provides ROS specific hooks for stage
+ii  ros-melodic-std-msgs                                   0.5.11-0bionic.20180606.182832               amd64        Standard ROS Messages including common message types representing primitive data types and other basic message constructs, such as multiarrays.
+ii  ros-melodic-std-srvs                                   1.11.2-0bionic.20180606.182427               amd64        Common service definitions.
+ii  ros-melodic-stereo-image-proc                          1.12.23-0bionic.20181112.211311              amd64        Stereo and single image rectification and disparity processing.
+ii  ros-melodic-stereo-msgs                                1.12.7-0bionic.20181112.205410               amd64        stereo_msgs contains messages specific to stereo processing, such as disparity images.
+ii  ros-melodic-tf                                         1.12.0-0bionic.20181117.184615               amd64        tf is a package that lets the user keep track of multiple coordinate frames over time.
+ii  ros-melodic-tf-conversions                             1.12.0-0bionic.20181117.190530               amd64        This package contains a set of conversion functions to convert common tf datatypes (point, vector, pose, etc) into semantically identical datatypes used by other libraries.
+ii  ros-melodic-tf2                                        0.6.5-0bionic.20181117.182549                amd64        tf2 is the second generation of the transform library, which lets the user keep track of multiple coordinate frames over time.
+ii  ros-melodic-tf2-eigen                                  0.6.5-0bionic.20181117.183021                amd64        tf2_eigen
+ii  ros-melodic-tf2-geometry-msgs                          0.6.5-0bionic.20181117.184336                amd64        tf2_geometry_msgs
+ii  ros-melodic-tf2-kdl                                    0.6.5-0bionic.20181117.184251                amd64        KDL binding for tf2
+ii  ros-melodic-tf2-msgs                                   0.6.5-0bionic.20181117.182146                amd64        tf2_msgs
+ii  ros-melodic-tf2-py                                     0.6.5-0bionic.20181117.183301                amd64        The tf2_py package
+ii  ros-melodic-tf2-ros                                    0.6.5-0bionic.20181117.183710                amd64        This package contains the ROS bindings for the tf2 library, for both Python and C++.
+ii  ros-melodic-theora-image-transport                     1.9.5-0bionic.20181112.203300                amd64        Theora_image_transport provides a plugin to image_transport for transparently sending an image stream encoded with the Theora codec.
+ii  ros-melodic-topic-tools                                1.14.3-0bionic.20181112.182554               amd64        Tools for directing, throttling, selecting, and otherwise messing with ROS topics at a meta level.
+ii  ros-melodic-trajectory-msgs                            1.12.7-0bionic.20181109.225228               amd64        This package defines messages for defining robot trajectories.
+ii  ros-melodic-transmission-interface                     0.15.1-0bionic.20181112.185727               amd64        Transmission Interface.
+ii  ros-melodic-turtle-actionlib                           0.1.11-0bionic.20181112.191733               amd64        turtle_actionlib demonstrates how to write an action server and client with the turtlesim.
+ii  ros-melodic-turtle-tf                                  0.2.2-0bionic.20181117.190550                amd64        turtle_tf demonstrates how to write a tf broadcaster and listener with the turtlesim.
+ii  ros-melodic-turtle-tf2                                 0.2.2-0bionic.20181117.184718                amd64        turtle_tf2 demonstrates how to write a tf2 broadcaster and listener with the turtlesim.
+ii  ros-melodic-turtlesim                                  0.9.0-0bionic.20181112.174608                amd64        turtlesim is a tool made for teaching ROS and ROS packages.
+ii  ros-melodic-urdf                                       1.13.1-0bionic.20181112.182608               amd64        This package contains a C++ parser for the Unified Robot Description Format (URDF), which is an XML format for representing a robot model.
+ii  ros-melodic-urdf-parser-plugin                         1.13.1-0bionic.20180606.182626               amd64        This package contains a C++ base class for URDF parsers.
+ii  ros-melodic-urdf-sim-tutorial                          0.4.0-0bionic.20190221.011253                amd64        The urdf_sim_tutorial package
+ii  ros-melodic-urdf-tutorial                              0.4.0-0bionic.20181117.194507                amd64        This package contains a number of URDF tutorials.
+ii  ros-melodic-urdfdom-py                                 0.4.0-0bionic.20180606.182603                amd64        Python implementation of the URDF parser.
+ii  ros-melodic-vision-opencv                              1.13.0-0bionic.20181112.210240               amd64        Packages for interfacing ROS with OpenCV, a library of programming functions for real time computer vision.
+ii  ros-melodic-visualization-marker-tutorials             0.10.3-0bionic.20181112.174330               amd64        The visulalization_marker_tutorials package
+ii  ros-melodic-visualization-msgs                         1.12.7-0bionic.20181109.225021               amd64        visualization_msgs is a set of messages used by higher level packages, such as rviz, that deal in visualization-specific data.
+ii  ros-melodic-visualization-tutorials                    0.10.3-0bionic.20181117.201357               amd64        Metapackage referencing tutorials related to rviz and visualization.
+ii  ros-melodic-viz                                        1.4.1-0bionic.20190204.220552                amd64        A metapackage to aggregate several packages.
+ii  ros-melodic-webkit-dependency                          1.1.0-0bionic.20180606.182604                amd64        This encapsulates the WebKit dependency for a specific ROS distribution and its Qt version
+ii  ros-melodic-xacro                                      1.13.3-0bionic.20181112.185931               amd64        Xacro (XML Macros) Xacro is an XML macro language.
+ii  ros-melodic-xmlrpcpp                                   1.14.3-0bionic.20180806.185143               amd64        XmlRpc++ is a C++ implementation of the XML-RPC protocol.
