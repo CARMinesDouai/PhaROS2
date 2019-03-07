@@ -11,12 +11,12 @@ You can find the installation for turtlebot2 with ROS2 at [this link](https://gi
 *Note: All of my devellopement was done on Ubuntu 18.04.1 LTS with ROS2 Bouncy*
 
 ### RCLC
-Just before enter in Pharo side, you need to install `RCLC`. `RCLC` is jeust an adaptation of `RCL` but with different simplification to handle more easly the different method of `RCL`.
+Just before entering the Pharo side, you need to install `RCLC`. `RCLC` is just an adaptation of `RCL` but with different simplification to handle more easly the different method of `RCL`.
 [Here](https://github.com/ros2/rclc) you have the link to Github of the RCLC.
-To install this Library, juste clone this repo into your `ros2_ws/src`.
+To install this Library, just clone this repo into your `ros2_ws/src`.
 To test if the `RCLC` compile correctly, you juste have to run this command in your `~/ros2_ws`
 ```shell
-src/ament_tools/scripts/ament.py build --build-tests --symlink-install
+src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 ```
 
 ### PhaROSmsgs
